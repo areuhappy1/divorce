@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>이혼 재산분할 전문 | 법률사무소 합의 - 변호사 직접 상담</title>
-    <meta name="description" content="2022년 개소 이후 높은 조정 성립률. 법률사무소 합의가 재산분할, 양육권, 위자료 등 당신의 권리를 끝까지 지킵니다.">
-    <meta name="keywords" content="이혼변호사, 재산분할, 양육권, 위자료, 법률사무소 합의, 옥수동 변호사">
+    <title>이혼 재산분할 | 법률사무소 합의 - 변호사 직접 상담</title>
+    <meta name="description" content="법률사무소 합의가 재산분할, 양육권, 위자료 등 당신의 권리를 끝까지 지킵니다. 변호사 직접 상담.">
+    <meta name="keywords" content="이혼변호사, 재산분할, 양육권, 위자료, 법률사무소 합의, 이혼상담">
     <link rel="canonical" href="https://본인아이디.github.io/레포이름/">
 
     <script type="application/ld+json">
@@ -14,32 +14,294 @@
       "@context": "https://schema.org",
       "@type": "LegalService",
       "name": "법률사무소 합의",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "서울",
-        "addressRegion": "성동구",
-        "streetAddress": "옥수동 인근"
-      },
-      "telephone": "010-0000-0000",
+      "telephone": "010-8407-7077",
       "openingHours": "Mo-Fr 09:00-18:00",
       "priceRange": "$$",
-      "description": "이혼 및 가사 전문 변호사 서비스"
+      "description": "이혼 및 가사 변호사 서비스"
     }
     </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #0a192f; --accent: #b8926a; --light-bg: #f9f9f9; }
-        body { font-family: 'Pretendard', sans-serif; word-break: keep-all; }
+        :root { --primary: #0a192f; --accent: #b8926a; --light-bg: #f9f9f9; --accent-light: #f5efe8; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; word-break: keep-all; }
         
         /* 헤더/네비 */
         .navbar { background: #fff; border-bottom: 2px solid var(--primary); }
         .nav-link { font-weight: 700; color: var(--primary); }
 
-        /* 히로 섹션 */
-        .hero { padding: 100px 0; background: linear-gradient(135deg, #0a192f 0%, #112240 100%); color: white; }
-        .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.3; }
-        .hero mark { background: var(--accent); color: white; }
+        /* ========== 서베이 섹션 ========== */
+        .survey-hero {
+            background: linear-gradient(135deg, #0a192f 0%, #1a365d 50%, #0a192f 100%);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .survey-hero h1 { font-size: 2.4rem; font-weight: 800; line-height: 1.4; }
+        .survey-hero .highlight { color: var(--accent); }
+        .survey-hero .subtitle { opacity: 0.8; margin-top: 12px; font-size: 1.05rem; }
+
+        .survey-wrapper {
+            background: linear-gradient(180deg, #0a192f 0%, #f9f9f9 180px);
+            padding: 0 0 60px;
+        }
+        .survey-card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            padding: 0;
+            overflow: hidden;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* 진행바 */
+        .survey-progress {
+            background: #f0f0f0;
+            height: 6px;
+            width: 100%;
+        }
+        .survey-progress-bar {
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent), #d4a76a);
+            transition: width 0.4s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .step-indicator {
+            padding: 20px 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .step-indicator .step-num {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 600;
+        }
+        .step-indicator .step-label {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 700;
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* 질문 영역 */
+        .survey-body { padding: 24px 40px 40px; }
+        .survey-step { display: none; }
+        .survey-step.active { display: block; animation: fadeInUp 0.3s ease; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .question-desc {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        /* 선택지 카드 스타일 */
+        .option-grid { display: flex; flex-direction: column; gap: 10px; }
+        .option-card {
+            border: 2px solid #e8e8e8;
+            border-radius: 14px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #fafafa;
+        }
+        .option-card:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            transform: translateX(4px);
+        }
+        .option-card.selected {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            box-shadow: 0 4px 12px rgba(184,146,106,0.2);
+        }
+        .option-card .option-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .option-card.selected .option-icon { background: var(--accent); color: white; }
+        .option-card .option-text { font-weight: 600; font-size: 0.95rem; color: #333; }
+        .option-card .option-sub { font-size: 0.8rem; color: #999; margin-top: 2px; }
+
+        /* 체크박스 그리드 */
+        .checkbox-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .checkbox-card {
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 12px 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #fafafa;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #555;
+            flex: 0 0 auto;
+        }
+        .checkbox-card:hover { border-color: var(--accent); background: var(--accent-light); }
+        .checkbox-card.selected {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+        }
+
+        /* 연락처 입력 폼 */
+        .contact-form-group { margin-bottom: 18px; }
+        .contact-form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .contact-input {
+            width: 100%;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            font-weight: 500;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: white;
+        }
+
+        /* 버튼 */
+        .survey-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 12px;
+        }
+        .btn-survey-prev {
+            background: #f0f0f0;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-weight: 700;
+            color: #777;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-survey-prev:hover { background: #e0e0e0; }
+        .btn-survey-next {
+            background: var(--primary);
+            border: none;
+            border-radius: 12px;
+            padding: 14px 36px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-grow: 1;
+            max-width: 280px;
+        }
+        .btn-survey-next:hover { background: #112240; transform: translateY(-1px); }
+        .btn-survey-next:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+        /* 전송 완료 화면 */
+        .complete-section { text-align: center; padding: 20px 0; }
+        .complete-icon { font-size: 4rem; margin-bottom: 16px; }
+        .complete-title { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+        .complete-desc { font-size: 0.95rem; color: #777; line-height: 1.7; margin-bottom: 24px; }
+        .complete-box {
+            background: linear-gradient(135deg, #0a192f, #1a365d);
+            border-radius: 18px;
+            padding: 28px;
+            color: white;
+            margin: 20px 0;
+        }
+
+        /* 변호사 소개 섹션 */
+        .lawyer-intro {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            color: white;
+        }
+        .lawyer-intro .section-badge {
+            display: inline-block;
+            background: rgba(184,146,106,0.2);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .lawyer-intro h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+        .lawyer-intro .accent-text { color: var(--accent); }
+        .lawyer-intro .intro-desc {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .lawyer-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .lawyer-stat-item {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+        .lawyer-stat-item .stat-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .lawyer-stat-item .stat-value { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+        .lawyer-stat-item .stat-label { font-size: 0.82rem; opacity: 0.6; margin-top: 4px; }
+        .expertise-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .expertise-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .expertise-list li:last-child { border-bottom: none; }
+        .expertise-list .check-icon { color: var(--accent); font-size: 1rem; }
 
         /* 신뢰 지표 */
         .trust-box { background: white; border-radius: 15px; padding: 30px; margin-top: -50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
@@ -49,13 +311,24 @@
         .section-title { font-weight: 800; margin-bottom: 50px; position: relative; }
         .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 15px auto; }
 
-        /* 상담 폼 */
-        .form-card { border: none; background: #fff; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); padding: 40px; }
-        .form-control { background: #f8f9fa; border: 1px solid #eee; padding: 12px; }
-
-        /* 플로팅 버튼 (아이보스 스타일 전환유도) */
+        /* 플로팅 버튼 */
         .floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
-        .btn-cta { background: var(--accent); color: white; border-radius: 50px; padding: 15px 30px; font-weight: 800; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-cta { background: var(--accent); color: white; border-radius: 50px; padding: 15px 30px; font-weight: 800; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-decoration: none; }
+        .btn-cta:hover { color: white; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .survey-hero h1 { font-size: 1.7rem; }
+            .survey-body { padding: 20px 20px 30px; }
+            .step-indicator { padding: 16px 20px 0; }
+            .question-title { font-size: 1.15rem; }
+            .option-card { padding: 14px 16px; }
+            .checkbox-grid { gap: 8px; }
+            .checkbox-card { font-size: 0.82rem; padding: 10px 14px; }
+            .lawyer-intro h2 { font-size: 1.8rem; }
+            .lawyer-stat-grid { grid-template-columns: 1fr; }
+            .lawyer-intro { padding: 60px 0; }
+        }
     </style>
 </head>
 <body>
@@ -63,104 +336,479 @@
     <nav class="navbar sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark" href="#">⚖️ 법률사무소 <span style="color:var(--accent)">합의</span></a>
-            <a href="#consult" class="btn btn-sm btn-outline-dark fw-bold">빠른 상담문의</a>
+            <a href="tel:010-8407-7077" class="btn btn-sm btn-outline-dark fw-bold">📞 전화 상담</a>
         </div>
     </nav>
 
-    <header class="hero text-center">
+    <!-- ========== 재산분할 서베이 ========== -->
+    <div class="survey-hero">
         <div class="container">
-            <p class="mb-3 fw-bold" style="color:var(--accent)">합리적인 합의, 명쾌한 결과</p>
-            <h1>막막한 이혼 준비,<br><mark>전문 변호사</mark>가 처음부터 함께합니다.</h1>
-            <p class="mt-4 opacity-75">2022년 11월 정식 개소 이후 수많은 조정 사례를 통해 증명된 실력</p>
+            <p style="font-size:0.9rem; color:var(--accent); font-weight:700; margin-bottom:10px;">
+                <i class="fa-solid fa-calculator"></i> 재산분할 사전 진단
+            </p>
+            <h1>이혼 시 재산분할,<br><span class="highlight">얼마나 받을 수 있을까요?</span></h1>
+            <p class="subtitle">10가지 항목에 답변하시면 변호사가 직접 분석하여 연락드립니다.</p>
+            <p style="font-size:0.8rem; opacity:0.5; margin-top:8px;">⏱ 약 2~3분 소요 | 완전 비밀 보장 | 상담비 3만 원</p>
         </div>
-    </header>
+    </div>
 
-    <section class="container">
-        <div class="trust-box row text-center">
-            <div class="col-md-4 border-end">
-                <h3 class="fw-bold">이혼 전문</h3>
-                <p class="mb-0">재산분할·양육권 전담</p>
-            </div>
-            <div class="col-md-4 border-end">
-                <h3 class="fw-bold">직접 상담</h3>
-                <p class="mb-0">사무장 없는 1:1 비밀 보장</p>
-            </div>
-            <div class="col-md-4">
-                <h3 class="fw-bold">맞춤 대응</h3>
-                <p class="mb-0">의뢰인 상황별 조정 전략</p>
-            </div>
-        </div>
-    </section>
+    <div class="survey-wrapper">
+        <div class="container">
+            <div class="survey-card" id="surveyCard">
+                <!-- 진행바 -->
+                <div class="survey-progress">
+                    <div class="survey-progress-bar" id="progressBar" style="width: 9%;"></div>
+                </div>
 
-    <main>
-        <section id="about" class="bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="section-title text-start">왜 '법률사무소 합의'인가?</h2>
-                        <p>이혼은 단순한 헤어짐이 아닌, 인생의 새로운 설계입니다. <strong>법률사무소 합의</strong>는 변호사가 직접 모든 서면을 작성하며, 의뢰인의 감정적 소모를 최소화하고 실질적인 자산 가치를 지키는 데 주력합니다.</p>
-                        <ul class="list-unstyled mt-4">
-                            <li class="mb-2">✔️ 은닉 재산 추적 및 기여도 극대화</li>
-                            <li class="mb-2">✔️ 자녀를 위한 최선의 양육권 확보</li>
-                            <li class="mb-2">✔️ 상간자 소송 등 유책 사유 철저 입증</li>
-                        </ul>
+                <div class="step-indicator" id="stepIndicator">
+                    <span class="step-num" id="stepNum">1 / 11</span>
+                    <span class="step-label" id="stepLabel">기본 정보</span>
+                </div>
+
+                <div class="survey-body">
+
+                    <!-- STEP 1: 성별 -->
+                    <div class="survey-step active" data-step="1">
+                        <div class="question-title">귀하의 성별은 무엇인가요?</div>
+                        <div class="question-desc">재산분할 기여도 판단 시 참고사항이 달라질 수 있습니다.</div>
+                        <div class="option-grid" data-name="gender">
+                            <div class="option-card" data-value="남성">
+                                <div class="option-icon">👨</div>
+                                <div><div class="option-text">남성</div></div>
+                            </div>
+                            <div class="option-card" data-value="여성">
+                                <div class="option-icon">👩</div>
+                                <div><div class="option-text">여성</div></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-center">
-                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=500&q=80" alt="변호사 상담 이미지" class="img-fluid rounded-3 shadow">
+
+                    <!-- STEP 2: 혼인 기간 -->
+                    <div class="survey-step" data-step="2">
+                        <div class="question-title">혼인 기간은 얼마나 되셨나요?</div>
+                        <div class="question-desc">혼인 기간이 길수록 재산분할 비율이 높아지는 경향이 있습니다.</div>
+                        <div class="option-grid" data-name="marriage_duration">
+                            <div class="option-card" data-value="3년 미만">
+                                <div class="option-icon">📅</div>
+                                <div>
+                                    <div class="option-text">3년 미만</div>
+                                    <div class="option-sub">단기 혼인</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="3~7년">
+                                <div class="option-icon">📅</div>
+                                <div>
+                                    <div class="option-text">3년 ~ 7년</div>
+                                    <div class="option-sub">중기 혼인</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="7~15년">
+                                <div class="option-icon">📅</div>
+                                <div>
+                                    <div class="option-text">7년 ~ 15년</div>
+                                    <div class="option-sub">장기 혼인</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="15~25년">
+                                <div class="option-icon">📅</div>
+                                <div>
+                                    <div class="option-text">15년 ~ 25년</div>
+                                    <div class="option-sub">장기 혼인</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="25년 이상">
+                                <div class="option-icon">📅</div>
+                                <div>
+                                    <div class="option-text">25년 이상</div>
+                                    <div class="option-sub">초장기 혼인</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: 총 재산 규모 -->
+                    <div class="survey-step" data-step="3">
+                        <div class="question-title">부부 공동 재산의 총 규모는 어느 정도인가요?</div>
+                        <div class="question-desc">부동산, 예금, 주식, 보험, 퇴직금 등을 모두 포함한 대략적인 금액을 선택해주세요.</div>
+                        <div class="option-grid" data-name="total_asset">
+                            <div class="option-card" data-value="5천만원 미만">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">5천만 원 미만</div></div>
+                            </div>
+                            <div class="option-card" data-value="5천만~1억">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">5천만 원 ~ 1억 원</div></div>
+                            </div>
+                            <div class="option-card" data-value="1억~3억">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">1억 ~ 3억 원</div></div>
+                            </div>
+                            <div class="option-card" data-value="3억~5억">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">3억 ~ 5억 원</div></div>
+                            </div>
+                            <div class="option-card" data-value="5억~10억">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">5억 ~ 10억 원</div></div>
+                            </div>
+                            <div class="option-card" data-value="10억 이상">
+                                <div class="option-icon">💰</div>
+                                <div><div class="option-text">10억 원 이상</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: 부동산 보유 -->
+                    <div class="survey-step" data-step="4">
+                        <div class="question-title">부부 명의의 부동산이 있나요?</div>
+                        <div class="question-desc">아파트, 주택, 상가, 토지 등 부동산은 재산분할의 핵심 대상입니다.</div>
+                        <div class="option-grid" data-name="real_estate">
+                            <div class="option-card" data-value="없음">
+                                <div class="option-icon">🏠</div>
+                                <div><div class="option-text">부동산 없음</div></div>
+                            </div>
+                            <div class="option-card" data-value="1채">
+                                <div class="option-icon">🏠</div>
+                                <div>
+                                    <div class="option-text">1채 보유</div>
+                                    <div class="option-sub">주거용 주택 1채</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="2채 이상">
+                                <div class="option-icon">🏘️</div>
+                                <div>
+                                    <div class="option-text">2채 이상 보유</div>
+                                    <div class="option-sub">다주택 또는 상가 포함</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="모르겠음">
+                                <div class="option-icon">❓</div>
+                                <div>
+                                    <div class="option-text">잘 모르겠음</div>
+                                    <div class="option-sub">배우자 명의 재산 불확실</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: 소득 구조 -->
+                    <div class="survey-step" data-step="5">
+                        <div class="question-title">부부의 소득 구조는 어떻게 되나요?</div>
+                        <div class="question-desc">경제적 기여도를 판단하는 중요한 기준입니다.</div>
+                        <div class="option-grid" data-name="income_structure">
+                            <div class="option-card" data-value="맞벌이">
+                                <div class="option-icon">👫</div>
+                                <div>
+                                    <div class="option-text">맞벌이</div>
+                                    <div class="option-sub">양쪽 모두 경제활동 중</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="본인만 소득">
+                                <div class="option-icon">💼</div>
+                                <div>
+                                    <div class="option-text">본인만 소득 있음</div>
+                                    <div class="option-sub">배우자는 전업주부/무직</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="배우자만 소득">
+                                <div class="option-icon">💼</div>
+                                <div>
+                                    <div class="option-text">배우자만 소득 있음</div>
+                                    <div class="option-sub">본인은 전업주부/무직</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="사업소득">
+                                <div class="option-icon">🏢</div>
+                                <div>
+                                    <div class="option-text">사업소득 중심</div>
+                                    <div class="option-sub">한쪽 또는 양쪽이 자영업</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 6: 가사·양육 기여도 -->
+                    <div class="survey-step" data-step="6">
+                        <div class="question-title">가사노동과 자녀 양육은 주로 누가 담당했나요?</div>
+                        <div class="question-desc">전업주부의 가사·양육 기여는 판례상 중요한 재산분할 기준이 됩니다.</div>
+                        <div class="option-grid" data-name="housework">
+                            <div class="option-card" data-value="본인 위주">
+                                <div class="option-icon">🧹</div>
+                                <div>
+                                    <div class="option-text">본인이 대부분 담당</div>
+                                    <div class="option-sub">가사 + 양육 80% 이상</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="공동 분담">
+                                <div class="option-icon">🤝</div>
+                                <div>
+                                    <div class="option-text">비교적 공동 분담</div>
+                                    <div class="option-sub">양쪽이 비슷하게 분담</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="배우자 위주">
+                                <div class="option-icon">🧹</div>
+                                <div>
+                                    <div class="option-text">배우자가 대부분 담당</div>
+                                    <div class="option-sub">본인은 주로 경제활동</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="자녀 없음">
+                                <div class="option-icon">👤</div>
+                                <div>
+                                    <div class="option-text">자녀가 없음</div>
+                                    <div class="option-sub">양육 기여 해당 없음</div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+                    <!-- STEP 7: 특유재산 여부 -->
+                    <div class="survey-step" data-step="7">
+                        <div class="question-title">혼인 전 가져온 재산(특유재산)이 있나요?</div>
+                        <div class="question-desc">혼인 전 재산, 상속·증여 받은 재산은 분할 대상에서 제외될 수 있습니다.</div>
+                        <div class="option-grid" data-name="special_asset">
+                            <div class="option-card" data-value="본인 특유재산 있음">
+                                <div class="option-icon">📋</div>
+                                <div>
+                                    <div class="option-text">본인이 특유재산 보유</div>
+                                    <div class="option-sub">혼전 재산, 상속, 증여 등</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="배우자 특유재산 있음">
+                                <div class="option-icon">📋</div>
+                                <div>
+                                    <div class="option-text">배우자가 특유재산 보유</div>
+                                    <div class="option-sub">배우자의 혼전/상속 재산</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="양쪽 다 있음">
+                                <div class="option-icon">📋</div>
+                                <div><div class="option-text">양쪽 모두 있음</div></div>
+                            </div>
+                            <div class="option-card" data-value="없음">
+                                <div class="option-icon">✖️</div>
+                                <div><div class="option-text">특유재산 없음 / 모르겠음</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 8: 유책 사유 -->
+                    <div class="survey-step" data-step="8">
+                        <div class="question-title">이혼 사유 중 해당되는 것이 있나요?</div>
+                        <div class="question-desc">유책 사유는 위자료 및 재산분할 비율에 영향을 줄 수 있습니다. (복수 선택 가능)</div>
+                        <div class="checkbox-grid" data-name="fault_reason">
+                            <div class="checkbox-card" data-value="배우자 외도">배우자 외도(부정행위)</div>
+                            <div class="checkbox-card" data-value="본인 외도">본인 외도</div>
+                            <div class="checkbox-card" data-value="가정폭력">가정폭력 (신체/정신)</div>
+                            <div class="checkbox-card" data-value="경제적 무능력">경제적 무능력/낭비</div>
+                            <div class="checkbox-card" data-value="가출/유기">장기 가출 / 유기</div>
+                            <div class="checkbox-card" data-value="시댁/처가 갈등">시댁·처가 갈등</div>
+                            <div class="checkbox-card" data-value="성격차이">성격차이 / 가치관 차이</div>
+                            <div class="checkbox-card" data-value="해당없음">특별한 사유 없음</div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 9: 은닉 재산 의심 -->
+                    <div class="survey-step" data-step="9">
+                        <div class="question-title">배우자의 재산 은닉이 의심되나요?</div>
+                        <div class="question-desc">은닉 재산 추적 여부에 따라 실제 분할 금액이 크게 달라질 수 있습니다.</div>
+                        <div class="option-grid" data-name="hidden_asset">
+                            <div class="option-card" data-value="강하게 의심">
+                                <div class="option-icon">🔍</div>
+                                <div>
+                                    <div class="option-text">강하게 의심됨</div>
+                                    <div class="option-sub">비밀 계좌, 차명 재산 등</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="약간 의심">
+                                <div class="option-icon">🤔</div>
+                                <div>
+                                    <div class="option-text">어느 정도 의심됨</div>
+                                    <div class="option-sub">소득 대비 재산이 적음</div>
+                                </div>
+                            </div>
+                            <div class="option-card" data-value="의심 없음">
+                                <div class="option-icon">✅</div>
+                                <div>
+                                    <div class="option-text">의심 없음</div>
+                                    <div class="option-sub">재산 내역을 대부분 파악</div>
+                                </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="consult">
-            <div class="container text-center">
-                <h2 class="section-title">무료 익명 상담 신청</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <article class="form-card text-start">
-                            <form action="https://formspree.io/f/maqdelko" method="POST">
-                                <div class="mb-4">
-                                    <label class="form-label">성함</label>
-                                    <input type="text" name="name" class="form-control" placeholder="성함을 입력하세요" required>
+                    <!-- STEP 10: 현재 상태 -->
+                    <div class="survey-step" data-step="10">
+                        <div class="question-title">현재 이혼 진행 상태는 어떤가요?</div>
+                        <div class="question-desc">현 단계에 맞는 전략을 함께 안내해 드립니다.</div>
+                        <div class="option-grid" data-name="current_status">
+                            <div class="option-card" data-value="이혼 고려 중">
+                                <div class="option-icon">💭</div>
+                                <div>
+                                    <div class="option-text">이혼을 고려하는 단계</div>
+                                    <div class="option-sub">아직 배우자에게 말하지 않음</div>
                                 </div>
-                                <div class="mb-4">
-                                    <label class="form-label">연락처</label>
-                                    <input type="tel" name="phone" class="form-control" placeholder="010-0000-0000" required>
+                            </div>
+                            <div class="option-card" data-value="협의 중">
+                                <div class="option-icon">🗣️</div>
+                                <div>
+                                    <div class="option-text">배우자와 협의 중</div>
+                                    <div class="option-sub">대화는 하고 있으나 합의 안 됨</div>
                                 </div>
-                                <div class="mb-4">
-                                    <label class="form-label">관심 분야</label>
-                                    <select name="category" class="form-select form-control">
-                                        <option value="재산분할">재산분할 기여도 문의</option>
-                                        <option value="양육권">양육권 및 양육비</option>
-                                        <option value="위자료">위자료 청구 소송</option>
-                                        <option value="기타">기타 상담</option>
-                                    </select>
+                            </div>
+                            <div class="option-card" data-value="조정/소송 예정">
+                                <div class="option-icon">⚖️</div>
+                                <div>
+                                    <div class="option-text">조정 또는 소송 준비 중</div>
+                                    <div class="option-sub">법적 절차를 진행하려 함</div>
                                 </div>
-                                <div class="mb-4">
-                                    <label class="form-label">고민 내용</label>
-                                    <textarea name="message" class="form-control" rows="4" placeholder="상담 받고 싶은 내용을 간단히 적어주세요."></textarea>
+                            </div>
+                            <div class="option-card" data-value="소송 진행 중">
+                                <div class="option-icon">📄</div>
+                                <div>
+                                    <div class="option-text">이미 소송 진행 중</div>
+                                    <div class="option-sub">현재 재판이 진행되고 있음</div>
                                 </div>
-                                <button type="submit" class="btn btn-dark w-100 py-3 fw-bold" style="background:var(--primary)">비밀 상담 예약하기</button>
-                            </form>
-                            <p class="text-center mt-3 text-muted" style="font-size:12px;">* 본 정보는 상담 목적으로만 사용되며 법적 보호를 받습니다.</p>
-                        </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 11: 연락처 입력 -->
+                    <div class="survey-step" data-step="11">
+                        <div class="question-title">마지막으로, 연락처를 남겨주세요.</div>
+                        <div class="question-desc">입력하신 내용을 바탕으로 변호사가 직접 분석 후 연락드리겠습니다.<br>비밀이 철저히 보장됩니다.</div>
+                        
+                        <div style="background:#f0f7ff; border:2px solid #c5ddf5; border-radius:12px; padding:14px 18px; margin-bottom:20px;">
+                            <p style="font-size:0.88rem; color:#3a6fa0; margin:0; font-weight:600; line-height:1.6;">
+                                <i class="fa-solid fa-info-circle"></i> &nbsp;전화 상담 시 <strong>상담비 3만 원</strong>이 발생합니다.<br>
+                                <span style="font-weight:400; font-size:0.82rem; color:#6a9fd8;">변호사가 귀하의 상황을 직접 분석하여 맞춤 전략을 안내드립니다.</span>
+                            </p>
+                        </div>
+                        
+                        <div class="contact-form-group">
+                            <label><i class="fa-solid fa-user" style="color:var(--accent);"></i> 성함 (가명 가능)</label>
+                            <input type="text" class="contact-input" id="contactName" placeholder="성함을 입력해주세요">
+                        </div>
+                        <div class="contact-form-group">
+                            <label><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 연락처</label>
+                            <input type="tel" class="contact-input" id="contactPhone" placeholder="010-0000-0000">
+                        </div>
+                        <div class="contact-form-group">
+                            <label><i class="fa-solid fa-clock" style="color:var(--accent);"></i> 희망 연락 시간</label>
+                            <input type="text" class="contact-input" id="contactTime" placeholder="예: 평일 오후 2시~5시">
+                        </div>
+                        <div class="contact-form-group">
+                            <label><i class="fa-solid fa-comment" style="color:var(--accent);"></i> 추가 전달 사항 (선택)</label>
+                            <textarea class="contact-input" id="contactMessage" rows="3" placeholder="변호사에게 미리 전달하고 싶은 내용이 있으면 적어주세요." style="resize:vertical;"></textarea>
+                        </div>
+                        <p style="font-size:0.75rem; color:#bbb; margin-top:8px; line-height:1.5;">
+                            ※ 입력된 정보는 상담 목적으로만 사용되며 법적 보호를 받습니다.<br>
+                            ※ 전화 상담 시 상담비 3만 원이 발생합니다.
+                        </p>
+                    </div>
+
+                    <!-- 전송 완료 화면 -->
+                    <div class="survey-step complete-section" data-step="complete">
+                        <div class="complete-icon">✅</div>
+                        <div class="complete-title">상담 신청이 완료되었습니다!</div>
+                        <div class="complete-desc">
+                            귀하의 재산분할 진단 내용이 안전하게 전달되었습니다.<br>
+                            <strong>변호사가 직접 분석 후 빠른 시일 내에 연락드리겠습니다.</strong>
+                        </div>
+                        <div class="complete-box">
+                            <div style="font-size:0.85rem; opacity:0.7; margin-bottom:12px;">상담 진행 안내</div>
+                            <div style="text-align:left; font-size:0.92rem; line-height:2;">
+                                <div>📞 <strong>1단계</strong> — 변호사가 진단 내용을 분석합니다</div>
+                                <div>📋 <strong>2단계</strong> — 희망 시간에 맞춰 전화 상담을 드립니다</div>
+                                <div>💰 <strong>상담비</strong> — 3만 원 (전화 상담 시 안내)</div>
+                                <div>⚖️ <strong>3단계</strong> — 맞춤 전략과 예상 분할 비율을 안내합니다</div>
+                            </div>
+                        </div>
+                        <div style="background:#fff8ef; border:2px solid var(--accent); border-radius:14px; padding:18px; margin-top:16px; text-align:left;">
+                            <div style="font-weight:800; color:var(--primary); margin-bottom:6px;">
+                                <i class="fa-solid fa-lightbulb" style="color:var(--accent);"></i> 참고 안내
+                            </div>
+                            <p style="font-size:0.85rem; color:#555; margin:0; line-height:1.7;">
+                                통상 1영업일 이내 연락드리며, 긴급 사안의 경우 당일 연락이 가능합니다.
+                                모든 상담 내용은 비밀이 철저히 보장되오니 안심하셔도 됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 네비게이션 버튼 -->
+                    <div class="survey-nav" id="surveyNav">
+                        <button class="btn-survey-prev" id="btnPrev" style="visibility:hidden;" onclick="prevStep()">
+                            <i class="fa-solid fa-arrow-left"></i> 이전
+                        </button>
+                        <button class="btn-survey-next" id="btnNext" disabled onclick="nextStep()">
+                            다음 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <!-- ========== 변호사 소개 & 문의 채널 ========== -->
+    <div class="lawyer-intro" id="lawyer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div style="margin-bottom:24px;">
+                        <img src="images/logo.png" alt="법률사무소 합의 로고" style="max-height:80px; max-width:260px; object-fit:contain;">
+                    </div>
+                    <span class="section-badge">법률사무소 합의</span>
+                    <h2>이혼·재산분할,<br><span class="accent-text">경험이 결과를 만듭니다.</span></h2>
+                    <p class="intro-desc">
+                        법률사무소 합의는 이혼 및 가사 사건에 집중하여 
+                        수많은 조정·소송 사례를 다뤄왔습니다. 변호사가 직접 모든 서면을 작성하며, 
+                        의뢰인의 감정적 소모를 최소화하고 <strong>실질적인 자산 가치를 지키는 데</strong> 주력합니다.
+                    </p>
+                    <ul class="expertise-list">
+                        <li><span class="check-icon"><i class="fa-solid fa-check-circle"></i></span> 재산분할 기여도 극대화 및 은닉 재산 추적</li>
+                        <li><span class="check-icon"><i class="fa-solid fa-check-circle"></i></span> 자녀를 위한 최선의 양육권 확보 전략</li>
+                        <li><span class="check-icon"><i class="fa-solid fa-check-circle"></i></span> 상간자 소송 등 유책 사유 철저 입증</li>
+                        <li><span class="check-icon"><i class="fa-solid fa-check-circle"></i></span> 사무장 없는 1:1 비밀 상담 보장</li>
+                        <li><span class="check-icon"><i class="fa-solid fa-check-circle"></i></span> 의뢰인 상황별 맞춤 조정·소송 전략 수립</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="lawyer-stat-grid" style="grid-template-columns: 1fr;">
+                        <a href="tel:010-8407-7077" class="lawyer-stat-item" style="text-decoration:none; color:inherit; cursor:pointer;">
+                            <div class="stat-icon">📞</div>
+                            <div class="stat-value">대표 문의 전화</div>
+                            <div style="font-size:1.3rem; font-weight:800; color:white; margin-top:6px;">010-8407-7077</div>
+                            <div class="stat-label">상담비 3만 원 발생</div>
+                        </a>
+                        <a href="http://pf.kakao.com/_prFQG/chat" target="_blank" class="lawyer-stat-item" style="text-decoration:none; color:inherit; cursor:pointer;">
+                            <div class="stat-icon">💬</div>
+                            <div class="stat-value">카카오톡 상담</div>
+                            <div class="stat-label">채팅으로 편하게 문의하세요</div>
+                        </a>
+                        <a href="https://naver.me/52RUjImo" target="_blank" class="lawyer-stat-item" style="text-decoration:none; color:inherit; cursor:pointer;">
+                            <div class="stat-icon">🟢</div>
+                            <div class="stat-value">네이버 플레이스</div>
+                            <div class="stat-label">리뷰 및 상세정보 확인</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-dark text-white py-5">
         <div class="container text-center text-md-start">
             <div class="row">
                 <div class="col-md-6">
                     <h4 class="fw-bold mb-4">⚖️ 법률사무소 합의</h4>
-                    <p class="opacity-50">대표 변호사 | 대한변호사협회 등록 이혼 전문 예정</p>
-                    <p class="opacity-50">서울특별시 성동구 옥수동 거주 및 활동 기반</p>
+                    <p class="opacity-50">이혼 · 재산분할 · 양육권 · 위자료</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-1">전화상담: 010-0000-0000</p>
-                    <p class="mb-1">이메일: settlement2407@gmail.com</p>
+                    <p class="mb-1">📞 대표전화: <a href="tel:010-8407-7077" style="color:var(--accent); text-decoration:none;">010-8407-7077</a> <span class="opacity-50" style="font-size:0.8rem;">(상담비 3만원)</span></p>
+                    <p class="mb-1">💬 <a href="http://pf.kakao.com/_prFQG/chat" target="_blank" style="color:var(--accent); text-decoration:none;">카카오톡 상담</a></p>
+                    <p class="mb-1">🟢 <a href="https://naver.me/52RUjImo" target="_blank" style="color:var(--accent); text-decoration:none;">네이버 플레이스</a></p>
+                    <p class="mb-1 opacity-50" style="font-size:0.85rem;">이메일: settlement2407@gmail.com</p>
                 </div>
             </div>
             <hr class="my-4 opacity-25">
@@ -169,8 +817,156 @@
     </footer>
 
     <div class="floating-cta d-md-block d-none">
-        <a href="#consult" class="btn btn-cta">🚀 지금 바로 1:1 상담하기</a>
+        <a href="tel:010-8407-7077" class="btn btn-cta">📞 지금 바로 전화 상담하기</a>
     </div>
+
+    <!-- ========== 서베이 스크립트 ========== -->
+    <script>
+    (function() {
+        let currentStep = 1;
+        const totalSteps = 11;
+        const answers = {};
+
+        const stepLabels = {
+            1: '기본 정보', 2: '혼인 기간', 3: '재산 규모', 4: '부동산',
+            5: '소득 구조', 6: '가사·양육', 7: '특유재산', 8: '유책 사유',
+            9: '은닉 재산', 10: '진행 상태', 11: '연락처 입력'
+        };
+
+        // 옵션 카드 클릭 (단일 선택)
+        document.querySelectorAll('.option-grid .option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const grid = this.closest('.option-grid');
+                grid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                const name = grid.dataset.name;
+                answers[name] = this.dataset.value;
+                document.getElementById('btnNext').disabled = false;
+            });
+        });
+
+        // 체크박스 카드 클릭 (복수 선택)
+        document.querySelectorAll('.checkbox-grid .checkbox-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('selected');
+                const grid = this.closest('.checkbox-grid');
+                const name = grid.dataset.name;
+                const selected = grid.querySelectorAll('.checkbox-card.selected');
+                answers[name] = Array.from(selected).map(c => c.dataset.value);
+                document.getElementById('btnNext').disabled = selected.length === 0;
+            });
+        });
+
+        // 연락처 입력 감지
+        function checkContactValid() {
+            const name = document.getElementById('contactName').value.trim();
+            const phone = document.getElementById('contactPhone').value.trim();
+            document.getElementById('btnNext').disabled = !(name && phone);
+        }
+
+        document.getElementById('contactName').addEventListener('input', checkContactValid);
+        document.getElementById('contactPhone').addEventListener('input', checkContactValid);
+
+        window.nextStep = function() {
+            if (currentStep < totalSteps) {
+                showStep(currentStep + 1);
+            } else {
+                submitSurvey();
+            }
+        };
+
+        window.prevStep = function() {
+            if (currentStep > 1) {
+                showStep(currentStep - 1);
+            }
+        };
+
+        function showStep(step) {
+            document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.survey-step[data-step="${step}"]`).classList.add('active');
+            currentStep = step;
+
+            // 진행바
+            document.getElementById('progressBar').style.width = (step / totalSteps * 100) + '%';
+            document.getElementById('stepNum').textContent = step + ' / ' + totalSteps;
+            document.getElementById('stepLabel').textContent = stepLabels[step] || '';
+
+            // 이전 버튼
+            document.getElementById('btnPrev').style.visibility = step === 1 ? 'hidden' : 'visible';
+
+            // 다음 버튼 텍스트
+            const btnNext = document.getElementById('btnNext');
+            if (step === totalSteps) {
+                btnNext.innerHTML = '<i class="fa-solid fa-paper-plane"></i> 상담 신청하기';
+            } else {
+                btnNext.innerHTML = '다음 <i class="fa-solid fa-arrow-right"></i>';
+            }
+
+            // 해당 스텝에 이미 선택된 값이 있는지 확인
+            if (step <= 10) {
+                const stepEl = document.querySelector(`.survey-step[data-step="${step}"]`);
+                const hasSelection = stepEl.querySelector('.option-card.selected') || stepEl.querySelector('.checkbox-card.selected');
+                btnNext.disabled = !hasSelection;
+            } else if (step === 11) {
+                checkContactValid();
+            }
+        }
+
+        function submitSurvey() {
+            const btnNext = document.getElementById('btnNext');
+            btnNext.disabled = true;
+            btnNext.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 전송 중...';
+
+            // Formspree 전송 데이터 구성
+            const formData = new FormData();
+            formData.append('_subject', '[재산분할 상담] 새로운 서베이 접수');
+            formData.append('성별', answers.gender || '-');
+            formData.append('혼인기간', answers.marriage_duration || '-');
+            formData.append('총재산규모', answers.total_asset || '-');
+            formData.append('부동산', answers.real_estate || '-');
+            formData.append('소득구조', answers.income_structure || '-');
+            formData.append('가사양육기여', answers.housework || '-');
+            formData.append('특유재산', answers.special_asset || '-');
+            formData.append('유책사유', (answers.fault_reason || []).join(', ') || '-');
+            formData.append('은닉재산의심', answers.hidden_asset || '-');
+            formData.append('진행상태', answers.current_status || '-');
+            formData.append('성함', document.getElementById('contactName').value.trim());
+            formData.append('연락처', document.getElementById('contactPhone').value.trim());
+            formData.append('희망연락시간', document.getElementById('contactTime').value.trim() || '무관');
+            formData.append('추가전달사항', document.getElementById('contactMessage').value.trim() || '없음');
+
+            fetch('https://formspree.io/f/maqdelko', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showComplete();
+                } else {
+                    alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                    btnNext.disabled = false;
+                    btnNext.innerHTML = '<i class="fa-solid fa-paper-plane"></i> 상담 신청하기';
+                }
+            })
+            .catch(() => {
+                alert('네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                btnNext.disabled = false;
+                btnNext.innerHTML = '<i class="fa-solid fa-paper-plane"></i> 상담 신청하기';
+            });
+        }
+
+        function showComplete() {
+            document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
+            document.querySelector('.survey-step[data-step="complete"]').classList.add('active');
+
+            document.getElementById('progressBar').style.width = '100%';
+            document.getElementById('stepNum').textContent = '완료';
+            document.getElementById('stepLabel').textContent = '접수 완료';
+            document.getElementById('surveyNav').style.display = 'none';
+        }
+    })();
+    </script>
 
 </body>
 </html>
