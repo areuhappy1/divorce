@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이혼 조정센터 | 사전 상담 신청</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #1a2a40;
+            --soft-gray: #f8f9fa;
+        }
+        body { 
+            background-color: var(--soft-gray); 
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: #333;
+        }
+        .container { max-width: 600px; padding-top: 60px; padding-bottom: 60px; }
+        .card { 
+            border: none; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            overflow: hidden;
+        }
+        .card-header { 
+            background-color: var(--primary-navy); 
+            color: white; 
+            text-align: center; 
+            padding: 30px;
+            border: none;
+        }
+        .card-header h2 { font-weight: 700; margin-bottom: 5px; }
+        .card-body { padding: 40px; background: white; }
+        .form-label { font-weight: 600; margin-bottom: 8px; color: #444; }
+        .form-control { 
+            border-radius: 8px; 
+            padding: 12px; 
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: var(--primary-navy);
+            box-shadow: 0 0 0 0.2rem rgba(26, 42, 64, 0.1);
+        }
+        .btn-submit { 
+            background-color: var(--primary-navy); 
+            border: none; 
+            color: white; 
+            padding: 15px; 
+            font-size: 18px; 
+            font-weight: 600; 
+            width: 100%; 
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover { 
+            background-color: #0d1621; 
+            transform: translateY(-2px);
+        }
+        .footer-text { 
+            font-size: 13px; 
+            color: #888; 
+            text-align: center; 
+            margin-top: 25px; 
+            line-height: 1.6;
+        }
+        .checkbox-group {
+            background: #fdfdfd;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>⚖️ 이혼 조정센터</h2>
+            <p class="mb-0">원만한 합의와 새로운 시작을 돕습니다.</p>
+        </div>
+        <div class="card-body">
+            <form action="https://formspree.io/f/maqdelko" method="POST">
+                
+                <div class="mb-4">
+                    <label class="form-label">의뢰인 성함</label>
+                    <input type="text" name="신청인_성함" class="form-control" placeholder="성함을 입력하세요" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">연락처</label>
+                    <input type="tel" name="연락처" class="form-control" placeholder="010-0000-0000" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">주요 조정 희망 항목 (중복 선택)</label>
+                    <div class="checkbox-group">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="조정항목" value="재산분할" id="check1">
+                            <label class="form-check-label" for="check1">재산분할</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="조정항목" value="위자료" id="check2">
+                            <label class="form-check-label" for="check2">위자료</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="조정항목" value="친권/양육권/양육비" id="check3">
+                            <label class="form-check-label" for="check3">친권 · 양육권 · 양육비</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="조정항목" value="기타" id="check4">
+                            <label class="form-check-label" for="check4">기타</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">상담 희망 내용</label>
+                    <textarea name="상담내용" class="form-control" rows="5" placeholder="현재 상황이나 궁금하신 점을 자유롭게 적어주세요."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-submit">상담 신청하기</button>
+
+                <p class="footer-text">
+                    * 작성하신 내용은 담당 변호사에게 보안 메일로 안전하게 전송됩니다.<br>
+                    * 본 서비스는 변호사법에 의거하여 비밀 유지가 보장됩니다.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
