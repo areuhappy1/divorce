@@ -3,133 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이혼 조정센터 | 사전 상담 신청</title>
+    
+    <title>이혼 재산분할 전문 | 법률사무소 합의 - 변호사 직접 상담</title>
+    <meta name="description" content="2022년 개소 이후 높은 조정 성립률. 법률사무소 합의가 재산분할, 양육권, 위자료 등 당신의 권리를 끝까지 지킵니다.">
+    <meta name="keywords" content="이혼변호사, 재산분할, 양육권, 위자료, 법률사무소 합의, 옥수동 변호사">
+    <link rel="canonical" href="https://본인아이디.github.io/레포이름/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "법률사무소 합의",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "서울",
+        "addressRegion": "성동구",
+        "streetAddress": "옥수동 인근"
+      },
+      "telephone": "010-0000-0000",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$",
+      "description": "이혼 및 가사 전문 변호사 서비스"
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-navy: #1a2a40;
-            --soft-gray: #f8f9fa;
-        }
-        body { 
-            background-color: var(--soft-gray); 
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            color: #333;
-        }
-        .container { max-width: 600px; padding-top: 60px; padding-bottom: 60px; }
-        .card { 
-            border: none; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            overflow: hidden;
-        }
-        .card-header { 
-            background-color: var(--primary-navy); 
-            color: white; 
-            text-align: center; 
-            padding: 30px;
-            border: none;
-        }
-        .card-header h2 { font-weight: 700; margin-bottom: 5px; }
-        .card-body { padding: 40px; background: white; }
-        .form-label { font-weight: 600; margin-bottom: 8px; color: #444; }
-        .form-control { 
-            border-radius: 8px; 
-            padding: 12px; 
-            border: 1px solid #ddd;
-        }
-        .form-control:focus {
-            border-color: var(--primary-navy);
-            box-shadow: 0 0 0 0.2rem rgba(26, 42, 64, 0.1);
-        }
-        .btn-submit { 
-            background-color: var(--primary-navy); 
-            border: none; 
-            color: white; 
-            padding: 15px; 
-            font-size: 18px; 
-            font-weight: 600; 
-            width: 100%; 
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-        .btn-submit:hover { 
-            background-color: #0d1621; 
-            transform: translateY(-2px);
-        }
-        .footer-text { 
-            font-size: 13px; 
-            color: #888; 
-            text-align: center; 
-            margin-top: 25px; 
-            line-height: 1.6;
-        }
-        .checkbox-group {
-            background: #fdfdfd;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-        }
+        :root { --primary: #0a192f; --accent: #b8926a; --light-bg: #f9f9f9; }
+        body { font-family: 'Pretendard', sans-serif; word-break: keep-all; }
+        
+        /* 헤더/네비 */
+        .navbar { background: #fff; border-bottom: 2px solid var(--primary); }
+        .nav-link { font-weight: 700; color: var(--primary); }
+
+        /* 히로 섹션 */
+        .hero { padding: 100px 0; background: linear-gradient(135deg, #0a192f 0%, #112240 100%); color: white; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.3; }
+        .hero mark { background: var(--accent); color: white; }
+
+        /* 신뢰 지표 */
+        .trust-box { background: white; border-radius: 15px; padding: 30px; margin-top: -50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        /* 섹션 공통 */
+        section { padding: 80px 0; }
+        .section-title { font-weight: 800; margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 15px auto; }
+
+        /* 상담 폼 */
+        .form-card { border: none; background: #fff; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); padding: 40px; }
+        .form-control { background: #f8f9fa; border: 1px solid #eee; padding: 12px; }
+
+        /* 플로팅 버튼 (아이보스 스타일 전환유도) */
+        .floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+        .btn-cta { background: var(--accent); color: white; border-radius: 50px; padding: 15px 30px; font-weight: 800; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h2>⚖️ 이혼 조정센터</h2>
-            <p class="mb-0">원만한 합의와 새로운 시작을 돕습니다.</p>
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">⚖️ 법률사무소 <span style="color:var(--accent)">합의</span></a>
+            <a href="#consult" class="btn btn-sm btn-outline-dark fw-bold">빠른 상담문의</a>
         </div>
-        <div class="card-body">
-            <form action="https://formspree.io/f/maqdelko" method="POST">
-                
-                <div class="mb-4">
-                    <label class="form-label">의뢰인 성함</label>
-                    <input type="text" name="신청인_성함" class="form-control" placeholder="성함을 입력하세요" required>
-                </div>
+    </nav>
 
-                <div class="mb-4">
-                    <label class="form-label">연락처</label>
-                    <input type="tel" name="연락처" class="form-control" placeholder="010-0000-0000" required>
-                </div>
+    <header class="hero text-center">
+        <div class="container">
+            <p class="mb-3 fw-bold" style="color:var(--accent)">합리적인 합의, 명쾌한 결과</p>
+            <h1>막막한 이혼 준비,<br><mark>전문 변호사</mark>가 처음부터 함께합니다.</h1>
+            <p class="mt-4 opacity-75">2022년 11월 정식 개소 이후 수많은 조정 사례를 통해 증명된 실력</p>
+        </div>
+    </header>
 
-                <div class="mb-4">
-                    <label class="form-label">주요 조정 희망 항목 (중복 선택)</label>
-                    <div class="checkbox-group">
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" name="조정항목" value="재산분할" id="check1">
-                            <label class="form-check-label" for="check1">재산분할</label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" name="조정항목" value="위자료" id="check2">
-                            <label class="form-check-label" for="check2">위자료</label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" name="조정항목" value="친권/양육권/양육비" id="check3">
-                            <label class="form-check-label" for="check3">친권 · 양육권 · 양육비</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="조정항목" value="기타" id="check4">
-                            <label class="form-check-label" for="check4">기타</label>
-                        </div>
+    <section class="container">
+        <div class="trust-box row text-center">
+            <div class="col-md-4 border-end">
+                <h3 class="fw-bold">이혼 전문</h3>
+                <p class="mb-0">재산분할·양육권 전담</p>
+            </div>
+            <div class="col-md-4 border-end">
+                <h3 class="fw-bold">직접 상담</h3>
+                <p class="mb-0">사무장 없는 1:1 비밀 보장</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="fw-bold">맞춤 대응</h3>
+                <p class="mb-0">의뢰인 상황별 조정 전략</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="section-title text-start">왜 '법률사무소 합의'인가?</h2>
+                        <p>이혼은 단순한 헤어짐이 아닌, 인생의 새로운 설계입니다. <strong>법률사무소 합의</strong>는 변호사가 직접 모든 서면을 작성하며, 의뢰인의 감정적 소모를 최소화하고 실질적인 자산 가치를 지키는 데 주력합니다.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-2">✔️ 은닉 재산 추적 및 기여도 극대화</li>
+                            <li class="mb-2">✔️ 자녀를 위한 최선의 양육권 확보</li>
+                            <li class="mb-2">✔️ 상간자 소송 등 유책 사유 철저 입증</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=500&q=80" alt="변호사 상담 이미지" class="img-fluid rounded-3 shadow">
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="mb-4">
-                    <label class="form-label">상담 희망 내용</label>
-                    <textarea name="상담내용" class="form-control" rows="5" placeholder="현재 상황이나 궁금하신 점을 자유롭게 적어주세요."></textarea>
+        <section id="consult">
+            <div class="container text-center">
+                <h2 class="section-title">무료 익명 상담 신청</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <article class="form-card text-start">
+                            <form action="https://formspree.io/f/maqdelko" method="POST">
+                                <div class="mb-4">
+                                    <label class="form-label">성함</label>
+                                    <input type="text" name="name" class="form-control" placeholder="성함을 입력하세요" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">연락처</label>
+                                    <input type="tel" name="phone" class="form-control" placeholder="010-0000-0000" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">관심 분야</label>
+                                    <select name="category" class="form-select form-control">
+                                        <option value="재산분할">재산분할 기여도 문의</option>
+                                        <option value="양육권">양육권 및 양육비</option>
+                                        <option value="위자료">위자료 청구 소송</option>
+                                        <option value="기타">기타 상담</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">고민 내용</label>
+                                    <textarea name="message" class="form-control" rows="4" placeholder="상담 받고 싶은 내용을 간단히 적어주세요."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-3 fw-bold" style="background:var(--primary)">비밀 상담 예약하기</button>
+                            </form>
+                            <p class="text-center mt-3 text-muted" style="font-size:12px;">* 본 정보는 상담 목적으로만 사용되며 법적 보호를 받습니다.</p>
+                        </article>
+                    </div>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <button type="submit" class="btn btn-submit">상담 신청하기</button>
-
-                <p class="footer-text">
-                    * 작성하신 내용은 담당 변호사에게 보안 메일로 안전하게 전송됩니다.<br>
-                    * 본 서비스는 변호사법에 의거하여 비밀 유지가 보장됩니다.
-                </p>
-            </form>
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-4">⚖️ 법률사무소 합의</h4>
+                    <p class="opacity-50">대표 변호사 | 대한변호사협회 등록 이혼 전문 예정</p>
+                    <p class="opacity-50">서울특별시 성동구 옥수동 거주 및 활동 기반</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">전화상담: 010-0000-0000</p>
+                    <p class="mb-1">이메일: settlement2407@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center opacity-50" style="font-size:12px;">© 2026 Law Office Hab-ui. All rights reserved.</p>
         </div>
+    </footer>
+
+    <div class="floating-cta d-md-block d-none">
+        <a href="#consult" class="btn btn-cta">🚀 지금 바로 1:1 상담하기</a>
     </div>
-</div>
 
 </body>
 </html>
