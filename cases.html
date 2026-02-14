@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성공사례 | 법률사무소 합의 - 이혼 재산분할 전문</title>
+    <meta name="description" content="법률사무소 합의의 이혼·재산분할 성공사례를 확인하세요. 실제 의뢰인의 권리를 지킨 사례들입니다.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap');
+        :root { --primary: #0a192f; --accent: #b8926a; --light-bg: #f8f7f5; --accent-light: #f5efe8; --text-dark: #1a1a1a; --text-muted: #6b6560; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; word-break: keep-all; background: var(--light-bg); }
+
+        /* 네비 */
+        .navbar { background: #fff; border-bottom: 1px solid #e0dcd6; box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
+
+        /* 히어로 */
+        .cases-hero {
+            background: linear-gradient(180deg, #0a192f 0%, #162a4a 100%);
+            color: white; padding: 60px 0 50px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cases-hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .cases-hero .hero-badge {
+            display: inline-block; font-family: 'Noto Serif KR', serif;
+            background: rgba(184,146,106,0.15); border: 1px solid rgba(184,146,106,0.3);
+            color: var(--accent); font-weight: 700; font-size: 0.82rem;
+            padding: 6px 18px; border-radius: 4px; letter-spacing: 2px; margin-bottom: 20px;
+        }
+        .cases-hero h1 { font-family: 'Noto Serif KR', serif; font-size: 2rem; font-weight: 900; line-height: 1.5; }
+        .cases-hero .highlight { color: var(--accent); }
+        .cases-hero .subtitle { opacity: 0.6; margin-top: 14px; font-size: 0.9rem; line-height: 1.7; }
+        .hero-divider { width: 40px; height: 2px; background: var(--accent); margin: 20px auto 0; opacity: 0.6; }
+
+        /* 필터 탭 */
+        .filter-tabs { padding: 30px 0 10px; text-align: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 20px; margin: 4px;
+            border: 1px solid #ddd8d0; border-radius: 4px; background: white;
+            font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+            cursor: pointer; transition: all 0.2s;
+        }
+        .filter-btn:hover { border-color: var(--accent); color: var(--text-dark); }
+        .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* 사례 카드 */
+        .cases-grid { padding: 20px 0 60px; }
+        .case-card {
+            background: white; border-radius: 4px; overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05); border: 1px solid #eae6e0;
+            margin-bottom: 24px; transition: all 0.3s;
+        }
+        .case-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .case-card-header {
+            background: var(--primary); color: white; padding: 16px 24px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .case-tag {
+            display: inline-block; background: rgba(184,146,106,0.2); color: var(--accent);
+            font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 3px;
+            letter-spacing: 0.5px;
+        }
+        .case-number { font-size: 0.75rem; opacity: 0.5; }
+        .case-card-body { padding: 24px; }
+        .case-title {
+            font-family: 'Noto Serif KR', serif; font-size: 1.1rem;
+            font-weight: 900; color: var(--text-dark); margin-bottom: 14px; line-height: 1.5;
+        }
+        .case-info { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+        .case-info-item {
+            font-size: 0.8rem; color: var(--text-muted);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .case-info-item i { color: var(--accent); font-size: 0.7rem; }
+        .case-desc {
+            font-size: 0.88rem; color: var(--text-muted); line-height: 1.8;
+            border-left: 2px solid var(--accent); padding-left: 14px; margin-bottom: 16px;
+        }
+        .case-result {
+            background: var(--accent-light); border-radius: 4px; padding: 14px 18px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .case-result-icon {
+            width: 36px; height: 36px; background: var(--accent); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: white;
+            font-size: 0.9rem; flex-shrink: 0;
+        }
+        .case-result-text { font-size: 0.88rem; font-weight: 700; color: var(--text-dark); }
+        .case-result-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+        /* 상담 유도 */
+        .cta-section {
+            background: linear-gradient(135deg, #0a192f, #1a365d); color: white;
+            padding: 60px 0; text-align: center;
+        }
+        .cta-section h2 { font-family: 'Noto Serif KR', serif; font-weight: 900; margin-bottom: 16px; }
+        .cta-section p { opacity: 0.6; margin-bottom: 30px; }
+        .cta-btn {
+            display: inline-block; background: var(--accent); color: white;
+            padding: 14px 36px; border-radius: 6px; font-weight: 700;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .cta-btn:hover { background: #a07b55; color: white; }
+
+        /* 안내 문구 */
+        .disclaimer {
+            text-align: center; padding: 20px; font-size: 0.73rem;
+            color: #bbb; line-height: 1.6;
+        }
+
+        /* 푸터 */
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { color: #d4a76a; }
+
+        @media (max-width: 768px) {
+            .cases-hero h1 { font-size: 1.5rem; }
+            .cases-hero { padding: 44px 0 36px; }
+            .case-card-body { padding: 18px; }
+            .case-info { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="gap:10px;">
+                <img src="images/logo.png" alt="법률사무소 합의 로고" style="height:40px; object-fit:contain;">
+            </a>
+            <div class="d-flex align-items-center" style="gap:8px;">
+                <a href="diagnosis.html" class="btn btn-sm fw-bold" style="font-size:0.82rem; border-radius:8px; padding:6px 14px; background:var(--primary); color:white; border:none;">
+                    <i class="fa-solid fa-stethoscope"></i> 절차진단
+                </a>
+                <a href="cases.html" class="btn btn-sm fw-bold" style="font-size:0.82rem; border-radius:8px; padding:6px 14px; background:var(--accent); color:white; border:none;">
+                    <i class="fa-solid fa-trophy"></i> 성공사례
+                </a>
+                <a href="tel:010-8407-7077" class="btn btn-sm btn-outline-dark fw-bold" style="font-size:0.82rem; border-radius:8px; padding:6px 14px;">
+                    <i class="fa-solid fa-phone"></i> 전화 상담
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 -->
+    <div class="cases-hero">
+        <div class="container">
+            <div class="hero-badge">SUCCESS CASES</div>
+            <h1>법률사무소 합의의<br><span class="highlight">이혼·재산분할 성공사례</span></h1>
+            <p class="subtitle">실제 의뢰인의 권리를 지킨 사례들입니다.<br>의뢰인 정보는 보호를 위해 익명 처리되었습니다.</p>
+            <div class="hero-divider"></div>
+        </div>
+    </div>
+
+    <!-- 필터 -->
+    <div class="filter-tabs">
+        <div class="container">
+            <span class="filter-btn active" data-filter="all">전체</span>
+            <span class="filter-btn" data-filter="property">재산분할</span>
+            <span class="filter-btn" data-filter="custody">양육권</span>
+            <span class="filter-btn" data-filter="alimony">위자료</span>
+            <span class="filter-btn" data-filter="complex">복합 사안</span>
+        </div>
+    </div>
+
+    <!-- 사례 카드들 -->
+    <div class="cases-grid">
+        <div class="container">
+            <div class="row" id="casesContainer">
+
+                <!-- 사례 1 -->
+                <div class="col-lg-6 case-item" data-category="property">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">재산분할</span>
+                            <span class="case-number">CASE #01</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">혼인 20년 전업주부, 재산분할 비율 50% 인정</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 여성 / 50대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 20년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-won-sign"></i> 재산규모 8억 원</div>
+                            </div>
+                            <div class="case-desc">
+                                전업주부로 20년간 가사와 양육을 전담하였으나, 배우자 측은 경제적 기여가 없다며 30%만 인정하려 하였습니다. 가사·양육 기여도를 입증하는 증거를 체계적으로 수집하여 재판부에 제출하였습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">재산분할 50% 인정 — 약 4억 원 확보</div>
+                                    <div class="case-result-sub">대법원 판례 기준 최대 비율 인정</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사례 2 -->
+                <div class="col-lg-6 case-item" data-category="property">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">재산분할 · 은닉재산</span>
+                            <span class="case-number">CASE #02</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">배우자 은닉 재산 3억 추적 성공</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 여성 / 40대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 12년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-won-sign"></i> 최종 확인 재산 9억 원</div>
+                            </div>
+                            <div class="case-desc">
+                                배우자가 이혼 소송 전 차명 계좌 및 친인척 명의 부동산으로 재산을 분산시킨 정황을 포착하였습니다. 금융거래정보 제출명령과 사실조회 촉탁을 통해 은닉 재산 약 3억 원을 추적하였습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">은닉 재산 3억 원 추가 확보</div>
+                                    <div class="case-result-sub">총 분할금 4.5억 원 확정</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사례 3 -->
+                <div class="col-lg-6 case-item" data-category="custody">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">양육권</span>
+                            <span class="case-number">CASE #03</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">아버지 단독 양육권 확보 — 자녀 2명</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 남성 / 40대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 8년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-child"></i> 자녀 2명 (초등)</div>
+                            </div>
+                            <div class="case-desc">
+                                배우자의 장기 가출 및 양육 방기 정황이 있었으나, 통상적으로 모(母)에게 유리한 양육권 판결 관행을 극복해야 하는 상황이었습니다. 아이들의 학교 생활, 의뢰인의 양육 환경 등을 체계적으로 입증하였습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">아버지 단독 양육권 인정</div>
+                                    <div class="case-result-sub">양육비 월 200만 원 확보</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사례 4 -->
+                <div class="col-lg-6 case-item" data-category="alimony">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">위자료 · 상간자 소송</span>
+                            <span class="case-number">CASE #04</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">배우자 외도 — 위자료 5,000만 원 + 상간자 배상</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 여성 / 30대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 6년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-child"></i> 자녀 1명</div>
+                            </div>
+                            <div class="case-desc">
+                                배우자의 부정행위 증거를 확보하여 이혼 소송과 동시에 상간자 손해배상 청구를 병행하였습니다. 정신적 피해에 대한 진단서 및 상담 기록을 증거로 제출하여 높은 위자료를 이끌어냈습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">위자료 5,000만 원 + 상간자 배상 3,000만 원</div>
+                                    <div class="case-result-sub">총 8,000만 원 손해배상 확보</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사례 5 -->
+                <div class="col-lg-6 case-item" data-category="complex">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">복합 사안</span>
+                            <span class="case-number">CASE #05</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">사업자 배우자 — 재산분할 + 양육권 + 위자료 종합 해결</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 여성 / 40대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 15년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-won-sign"></i> 재산규모 12억 원</div>
+                            </div>
+                            <div class="case-desc">
+                                자영업자인 배우자가 사업체 명의를 변경하고 매출을 축소 신고하는 등 재산 은닉을 시도하였습니다. 세무 자료 분석과 사업체 실사를 통해 실질 재산을 파악하고, 양육권과 위자료까지 종합적으로 해결하였습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">재산분할 5.5억 + 위자료 3,000만 원 + 양육권 확보</div>
+                                    <div class="case-result-sub">양육비 월 250만 원 추가 확정</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사례 6 -->
+                <div class="col-lg-6 case-item" data-category="property">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <span class="case-tag">재산분할 · 특유재산</span>
+                            <span class="case-number">CASE #06</span>
+                        </div>
+                        <div class="case-card-body">
+                            <div class="case-title">혼전 재산(특유재산) 5억 원 분할 대상 제외 성공</div>
+                            <div class="case-info">
+                                <div class="case-info-item"><i class="fa-solid fa-user"></i> 남성 / 50대</div>
+                                <div class="case-info-item"><i class="fa-solid fa-calendar"></i> 혼인기간 18년</div>
+                                <div class="case-info-item"><i class="fa-solid fa-won-sign"></i> 총 재산 15억 원</div>
+                            </div>
+                            <div class="case-desc">
+                                의뢰인이 혼인 전 상속받은 부동산 5억 원 상당을 배우자 측이 공동재산으로 주장하였습니다. 상속 당시 서류, 등기이전 기록, 자금 흐름을 추적하여 특유재산임을 입증하였습니다.
+                            </div>
+                            <div class="case-result">
+                                <div class="case-result-icon"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <div class="case-result-text">특유재산 5억 원 분할 대상 제외 인정</div>
+                                    <div class="case-result-sub">의뢰인 실질 재산 보전 성공</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 안내 문구 -->
+    <div class="disclaimer">
+        ※ 위 사례는 의뢰인 보호를 위해 일부 내용이 각색되었으며, 실제 사건의 결과는 개별 사안에 따라 달라질 수 있습니다.
+    </div>
+
+    <!-- 상담 유도 -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>비슷한 상황이신가요?</h2>
+            <p>변호사가 귀하의 상황을 직접 분석하여 최적의 전략을 안내드립니다.</p>
+            <a href="index.html" class="cta-btn" style="margin-right:10px;">
+                <i class="fa-solid fa-file-lines"></i> 무료 사전진단 받기
+            </a>
+            <a href="tel:010-8407-7077" class="cta-btn" style="background:transparent; border:1px solid rgba(255,255,255,0.3);">
+                <i class="fa-solid fa-phone"></i> 전화 상담하기
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-4"><i class="fa-solid fa-scale-balanced" style="color:var(--accent);"></i> 법률사무소 합의</h4>
+                    <p class="opacity-50">이혼 · 재산분할 · 양육권 · 위자료</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1"><i class="fa-solid fa-phone" style="color:var(--accent); font-size:0.85rem;"></i> 대표전화: <a href="tel:010-8407-7077">010-8407-7077</a> <span class="opacity-50" style="font-size:0.8rem;">(상담비 3만원)</span></p>
+                    <p class="mb-1"><i class="fa-solid fa-comment" style="color:var(--accent); font-size:0.85rem;"></i> <a href="http://pf.kakao.com/_prFQG/chat" target="_blank">카카오톡 상담</a></p>
+                    <p class="mb-1"><i class="fa-solid fa-map-location-dot" style="color:var(--accent); font-size:0.85rem;"></i> <a href="https://naver.me/52RUjImo" target="_blank">네이버 플레이스</a></p>
+                    <p class="mb-1 opacity-50" style="font-size:0.85rem;">이메일: settlement2407@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center opacity-50" style="font-size:12px;">© 2026 Law Office Hab-ui. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 필터 스크립트 -->
+    <script>
+    (function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const caseItems = document.querySelectorAll('.case-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+
+                caseItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                        item.style.animation = 'fadeIn 0.3s ease';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>
