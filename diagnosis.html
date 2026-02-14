@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이혼절차 진단 | 법률사무소 합의 - 합의·조정·소송 어떤 절차가 맞을까?</title>
+    <meta name="description" content="합의이혼, 조정이혼, 소송이혼 중 나에게 맞는 이혼 절차를 무료로 진단해 보세요. 법률사무소 합의가 최적의 방법을 안내합니다.">
+    <meta name="keywords" content="합의이혼, 조정이혼, 소송이혼, 이혼절차, 이혼방법, 이혼변호사">
+    <link rel="canonical" href="https://본인아이디.github.io/레포이름/diagnosis.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "법률사무소 합의",
+      "telephone": "010-8407-7077",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "description": "이혼 절차 진단 서비스"
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap');
+        :root { --primary: #0a192f; --accent: #b8926a; --light-bg: #f8f7f5; --accent-light: #f5efe8; --border: #d5d0c8; --text-dark: #1a1a1a; --text-muted: #6b6560; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; word-break: keep-all; background: #f8f7f5; }
+
+        /* 헤더/네비 */
+        .navbar { background: #fff; border-bottom: 1px solid #e0dcd6; box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
+        .nav-link { font-weight: 700; color: var(--primary); }
+
+        /* ========== 히어로 ========== */
+        .diag-hero {
+            background: linear-gradient(180deg, #0a192f 0%, #162a4a 100%);
+            color: white; padding: 56px 0 44px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .diag-hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .diag-hero .hero-badge {
+            display: inline-block; font-family: 'Noto Serif KR', serif;
+            background: rgba(184,146,106,0.15); border: 1px solid rgba(184,146,106,0.3);
+            color: var(--accent); font-weight: 700; font-size: 0.82rem;
+            padding: 6px 18px; border-radius: 4px; letter-spacing: 2px; margin-bottom: 20px;
+        }
+        .diag-hero h1 { font-family: 'Noto Serif KR', serif; font-size: 2rem; font-weight: 900; line-height: 1.5; letter-spacing: -0.5px; }
+        .diag-hero .highlight { color: var(--accent); }
+        .diag-hero .subtitle { opacity: 0.65; margin-top: 14px; font-size: 0.92rem; line-height: 1.7; }
+        .hero-divider { width: 40px; height: 2px; background: var(--accent); margin: 20px auto 0; opacity: 0.6; }
+
+        /* ========== 3가지 절차 비교 ========== */
+        .procedure-compare {
+            padding: 60px 0 40px;
+            background: var(--light-bg);
+        }
+        .procedure-compare .section-title {
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 900; font-size: 1.5rem; text-align: center; margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        .procedure-compare .section-sub {
+            text-align: center; font-size: 0.88rem; color: var(--text-muted);
+            margin-bottom: 40px; line-height: 1.7;
+        }
+        .proc-card {
+            background: white; border-radius: 8px; padding: 28px 24px;
+            border: 1px solid #eae6e0; box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            height: 100%; transition: all 0.3s; position: relative;
+        }
+        .proc-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .proc-card.recommended {
+            border-color: var(--accent);
+            box-shadow: 0 4px 24px rgba(184,146,106,0.15);
+        }
+        .proc-card.recommended::before {
+            content: '가장 많이 선택';
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--accent); color: white; font-size: 0.72rem; font-weight: 700;
+            padding: 4px 14px; border-radius: 20px; white-space: nowrap;
+        }
+        .proc-card .proc-icon {
+            width: 52px; height: 52px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; margin-bottom: 16px;
+        }
+        .proc-card h3 {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.15rem; font-weight: 900; margin-bottom: 10px; color: var(--text-dark);
+        }
+        .proc-card .proc-desc {
+            font-size: 0.84rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;
+        }
+        .proc-feature {
+            font-size: 0.82rem; color: var(--text-dark); padding: 7px 0;
+            border-bottom: 1px solid #f0ede8; display: flex; align-items: center; gap: 8px;
+        }
+        .proc-feature:last-child { border-bottom: none; }
+        .proc-feature i { font-size: 0.7rem; color: var(--accent); flex-shrink: 0; }
+
+        /* ========== 진단 카드 ========== */
+        .diag-wrapper {
+            background: linear-gradient(180deg, var(--light-bg) 0%, #eae6e0 100%);
+            padding: 60px 0 80px;
+        }
+        .diag-wrapper .section-title {
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 900; font-size: 1.5rem; text-align: center; margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        .diag-wrapper .section-sub {
+            text-align: center; font-size: 0.88rem; color: var(--text-muted);
+            margin-bottom: 40px; line-height: 1.7;
+        }
+        .diag-card {
+            background: #fff; border-radius: 3px;
+            box-shadow: 0 2px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+            padding: 0; overflow: hidden; max-width: 680px; margin: 0 auto;
+        }
+        .diag-card-header {
+            background: var(--primary); color: white; padding: 14px 36px;
+            display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;
+        }
+        .diag-card-header .header-left { display: flex; align-items: center; gap: 8px; opacity: 0.7; }
+        .diag-card-header .header-left i { color: var(--accent); font-size: 0.7rem; }
+        .diag-card-header .header-right { color: var(--accent); font-weight: 700; letter-spacing: 1px; font-size: 0.72rem; }
+
+        .diag-progress { background: #eae6e0; height: 3px; width: 100%; }
+        .diag-progress-bar { height: 3px; background: var(--accent); transition: width 0.5s cubic-bezier(0.4,0,0.2,1); }
+
+        .diag-step-indicator {
+            padding: 22px 36px 0; display: flex; justify-content: space-between; align-items: center;
+        }
+        .diag-step-indicator .step-num { font-size: 0.78rem; color: #aaa; font-weight: 600; font-variant-numeric: tabular-nums; }
+        .diag-step-indicator .step-label {
+            font-size: 0.72rem; color: var(--primary); font-weight: 700;
+            background: #f0ede8; padding: 4px 14px; border-radius: 3px; letter-spacing: 0.5px;
+        }
+
+        .diag-body { padding: 20px 36px 36px; }
+        .diag-step { display: none; }
+        .diag-step.active { display: block; animation: fadeIn 0.35s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dq-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.2rem; font-weight: 900; color: var(--text-dark);
+            margin-bottom: 6px; letter-spacing: -0.3px; line-height: 1.5;
+        }
+        .dq-desc {
+            font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;
+            line-height: 1.7; border-left: 2px solid var(--accent); padding-left: 12px;
+        }
+        .dq-grid { display: flex; flex-direction: column; gap: 8px; }
+        .dq-card {
+            border: 1px solid #e0dcd6; border-radius: 6px; padding: 15px 18px;
+            cursor: pointer; transition: all 0.2s ease;
+            display: flex; align-items: center; gap: 14px;
+            background: #fdfcfb; position: relative;
+        }
+        .dq-card::before {
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+            width: 3px; background: transparent; border-radius: 3px 0 0 3px; transition: background 0.2s;
+        }
+        .dq-card:hover { border-color: var(--accent); background: #faf8f5; }
+        .dq-card:hover::before { background: var(--accent); }
+        .dq-card.selected { border-color: var(--accent); background: var(--accent-light); }
+        .dq-card.selected::before { background: var(--accent); }
+        .dq-card .dq-icon {
+            width: 40px; height: 40px; border-radius: 8px; background: #f0ede8;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .dq-card.selected .dq-icon { background: var(--accent); color: white; }
+        .dq-card .dq-text { font-weight: 700; font-size: 0.92rem; color: var(--text-dark); }
+        .dq-card .dq-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+        .diag-nav {
+            display: flex; justify-content: space-between; margin-top: 28px;
+            gap: 12px; padding-top: 20px; border-top: 1px solid #eee;
+        }
+        .btn-diag-prev {
+            background: transparent; border: 1px solid #ddd; border-radius: 4px;
+            padding: 13px 24px; font-weight: 700; color: #999; cursor: pointer;
+            transition: all 0.2s; font-size: 0.88rem;
+        }
+        .btn-diag-prev:hover { background: #f5f3f0; border-color: #bbb; color: #666; }
+        .btn-diag-next {
+            background: var(--primary); border: none; border-radius: 4px;
+            padding: 13px 36px; font-weight: 700; color: white; cursor: pointer;
+            transition: all 0.2s; flex-grow: 1; max-width: 260px; font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-diag-next:hover { background: #112240; }
+        .btn-diag-next:disabled { opacity: 0.35; cursor: not-allowed; }
+
+        /* ========== 결과 화면 ========== */
+        .result-section { padding: 10px 0; }
+        .result-badge {
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            padding: 5px 16px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px;
+        }
+        .result-badge.mediation { background: rgba(184,146,106,0.15); color: var(--accent); }
+        .result-badge.consent { background: rgba(46,139,87,0.1); color: #2e8b57; }
+        .result-badge.litigation { background: rgba(178,34,34,0.1); color: #b22222; }
+
+        .result-title {
+            font-family: 'Noto Serif KR', serif; font-size: 1.4rem;
+            font-weight: 900; color: var(--primary); margin-bottom: 8px; line-height: 1.5;
+        }
+        .result-subtitle {
+            font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px;
+        }
+        .result-box {
+            background: var(--primary); border-radius: 6px; padding: 24px;
+            color: white; margin-bottom: 20px;
+        }
+        .result-box .box-label {
+            font-size: 0.72rem; opacity: 0.5; letter-spacing: 1px; margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+        .result-feature {
+            display: flex; align-items: flex-start; gap: 10px; padding: 8px 0;
+            font-size: 0.88rem; line-height: 1.6;
+        }
+        .result-feature i { color: var(--accent); margin-top: 4px; font-size: 0.8rem; flex-shrink: 0; }
+
+        .result-comparison {
+            background: #f8f6f2; border: 1px solid #e0dcd6; border-radius: 6px;
+            padding: 20px; margin-bottom: 20px;
+        }
+        .result-comparison h4 {
+            font-family: 'Noto Serif KR', serif; font-weight: 900;
+            font-size: 0.95rem; margin-bottom: 14px; color: var(--text-dark);
+        }
+        .compare-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 0; border-bottom: 1px solid #eae6e0; font-size: 0.82rem;
+        }
+        .compare-row:last-child { border-bottom: none; }
+        .compare-label { color: var(--text-muted); font-weight: 600; }
+        .compare-value { font-weight: 700; color: var(--text-dark); }
+        .compare-value.highlight { color: var(--accent); }
+
+        /* CTA 블록 */
+        .result-cta {
+            background: linear-gradient(135deg, var(--accent), #a07b55);
+            border-radius: 8px; padding: 28px; text-align: center; margin-top: 24px;
+        }
+        .result-cta h4 {
+            color: white; font-family: 'Noto Serif KR', serif;
+            font-weight: 900; font-size: 1.1rem; margin-bottom: 10px;
+        }
+        .result-cta p { color: rgba(255,255,255,0.8); font-size: 0.84rem; margin-bottom: 18px; line-height: 1.6; }
+        .result-cta .cta-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .result-cta .cta-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: 6px; font-weight: 700;
+            font-size: 0.88rem; text-decoration: none; transition: all 0.2s;
+        }
+        .result-cta .cta-btn-primary {
+            background: white; color: var(--primary);
+        }
+        .result-cta .cta-btn-primary:hover { background: #f0ede8; }
+        .result-cta .cta-btn-secondary {
+            background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white;
+        }
+        .result-cta .cta-btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+        /* 안내 박스 */
+        .info-notice {
+            display: flex; align-items: center; gap: 10px;
+            background: #f5f3f0; border-radius: 4px;
+            padding: 12px 16px; margin-bottom: 22px;
+            font-size: 0.78rem; color: #8a8580; line-height: 1.5;
+        }
+        .info-notice i { color: var(--accent); font-size: 0.85rem; flex-shrink: 0; }
+
+        /* 플로팅 버튼 */
+        .floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+        .btn-float-cta { background: var(--accent); color: white; border-radius: 50px; padding: 15px 30px; font-weight: 800; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-decoration: none; }
+        .btn-float-cta:hover { color: white; }
+
+        /* 푸터 */
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { color: #d4a76a; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .diag-hero h1 { font-size: 1.5rem; }
+            .diag-hero { padding: 44px 0 36px; }
+            .diag-body { padding: 18px 20px 28px; }
+            .diag-step-indicator { padding: 16px 20px 0; }
+            .diag-card-header { padding: 12px 20px; }
+            .dq-title { font-size: 1.05rem; }
+            .dq-card { padding: 13px 14px; }
+            .procedure-compare .section-title { font-size: 1.2rem; }
+            .proc-card { padding: 22px 18px; }
+            .result-cta .cta-buttons { flex-direction: column; }
+            .result-cta .cta-btn { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="gap:10px;">
+                <img src="images/logo.png" alt="법률사무소 합의 로고" style="height:40px; object-fit:contain;">
+            </a>
+            <div class="d-flex align-items-center" style="gap:8px;">
+                <a href="cases.html" class="btn btn-sm fw-bold" style="font-size:0.82rem; border-radius:8px; padding:6px 14px; background:var(--accent); color:white; border:none;">
+                    <i class="fa-solid fa-trophy"></i> 성공사례
+                </a>
+                <a href="tel:010-8407-7077" class="btn btn-sm btn-outline-dark fw-bold" style="font-size:0.82rem; border-radius:8px; padding:6px 14px;">
+                    <i class="fa-solid fa-phone"></i> 전화 상담
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 히어로 ========== -->
+    <div class="diag-hero">
+        <div class="container">
+            <div class="hero-badge">이혼절차 적합성 진단</div>
+            <h1>합의·조정·소송,<br><span class="highlight">어떤 이혼 절차가 맞을까요?</span></h1>
+            <p class="subtitle">6가지 질문에 답하시면,<br>귀하의 상황에 가장 적합한 이혼 절차를 안내해 드립니다.</p>
+            <div class="hero-divider"></div>
+            <p style="font-size:0.75rem; opacity:0.4; margin-top:16px; letter-spacing:0.5px;">소요시간 약 1분 &nbsp;|&nbsp; 비밀 엄수 보장 &nbsp;|&nbsp; 즉시 결과 확인</p>
+        </div>
+    </div>
+
+    <!-- ========== 3가지 절차 비교 ========== -->
+    <div class="procedure-compare">
+        <div class="container">
+            <div class="section-title">이혼의 3가지 절차</div>
+            <p class="section-sub">이혼은 크게 합의이혼, 조정이혼, 소송이혼으로 나뉩니다.<br>각 절차의 특징을 먼저 확인해 보세요.</p>
+            <div class="row g-4">
+                <!-- 합의이혼 -->
+                <div class="col-lg-4">
+                    <div class="proc-card">
+                        <div class="proc-icon" style="background:#e8f5e9; color:#2e8b57;">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3>합의이혼</h3>
+                        <div class="proc-desc">부부 쌍방이 이혼과 모든 조건(재산분할, 양육권 등)에 완전히 합의한 경우 진행하는 절차입니다.</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 양측 합의 필수</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 법원 확인만 거침</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 소요기간 1~3개월</div>
+                        <div class="proc-feature" style="color:var(--accent); font-weight:700;"><i class="fa-solid fa-triangle-exclamation"></i> 합의 내용이 불리할 수 있음</div>
+                    </div>
+                </div>
+                <!-- 조정이혼 -->
+                <div class="col-lg-4">
+                    <div class="proc-card recommended">
+                        <div class="proc-icon" style="background:var(--accent-light); color:var(--accent);">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3>조정이혼</h3>
+                        <div class="proc-desc">가정법원에 조정을 신청하여 조정위원회의 중재 하에 이혼 조건을 합의하는 절차입니다. <strong>재판상 이혼과 동일한 효력</strong>을 갖습니다.</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 법원이 공정하게 중재</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 확정판결과 동일한 효력</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 소요기간 2~4개월</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 소송보다 비용·시간 절약</div>
+                    </div>
+                </div>
+                <!-- 소송이혼 -->
+                <div class="col-lg-4">
+                    <div class="proc-card">
+                        <div class="proc-icon" style="background:#fce4ec; color:#b22222;">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <h3>소송이혼</h3>
+                        <div class="proc-desc">배우자가 이혼에 응하지 않거나 조건 합의가 불가능할 때, 법원 판결을 통해 이혼하는 절차입니다.</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 상대방 동의 불필요</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 법적 구속력 있는 판결</div>
+                        <div class="proc-feature"><i class="fa-solid fa-check"></i> 소요기간 6개월~1년+</div>
+                        <div class="proc-feature" style="color:#b22222; font-weight:700;"><i class="fa-solid fa-triangle-exclamation"></i> 비용·시간 부담 큼</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 진단 퀴즈 ========== -->
+    <div class="diag-wrapper" id="diagSection">
+        <div class="container">
+            <div class="section-title">나에게 맞는 절차 진단하기</div>
+            <p class="section-sub">아래 질문에 답하시면 귀하의 상황에 가장 적합한 이혼 절차를 안내해 드립니다.</p>
+
+            <div class="diag-card" id="diagCard">
+                <div class="diag-card-header">
+                    <div class="header-left">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>법률사무소 합의 &middot; 절차 진단</span>
+                    </div>
+                    <div class="header-right">CONFIDENTIAL</div>
+                </div>
+
+                <div class="diag-progress">
+                    <div class="diag-progress-bar" id="diagProgressBar" style="width: 16.6%;"></div>
+                </div>
+
+                <div class="diag-step-indicator" id="diagStepIndicator">
+                    <span class="step-num" id="diagStepNum">1 / 6</span>
+                    <span class="step-label" id="diagStepLabel">이혼 동의 여부</span>
+                </div>
+
+                <div class="diag-body">
+
+                    <!-- Q1: 이혼 동의 여부 -->
+                    <div class="diag-step active" data-step="1">
+                        <div class="info-notice">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>진단 결과는 저장되지 않으며, 즉시 화면에서만 확인됩니다.</span>
+                        </div>
+                        <div class="dq-title">배우자도 이혼에 동의하고 있습니까?</div>
+                        <div class="dq-desc">이혼의 첫 번째 관건은 쌍방의 이혼 의사 합치 여부입니다. 합의이혼은 양측 모두 동의해야 진행할 수 있습니다.</div>
+                        <div class="dq-grid" data-name="q1">
+                            <div class="dq-card" data-value="both_agree">
+                                <div class="dq-icon"><i class="fa-solid fa-handshake" style="color:#2e8b57;"></i></div>
+                                <div>
+                                    <div class="dq-text">네, 양측 모두 동의합니다</div>
+                                    <div class="dq-sub">이혼 자체에는 합의된 상태</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="not_yet">
+                                <div class="dq-icon"><i class="fa-solid fa-comment-dots" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">아직 이야기하지 못했습니다</div>
+                                    <div class="dq-sub">배우자에게 말을 꺼내지 않은 상태</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="disagree">
+                                <div class="dq-icon"><i class="fa-solid fa-ban" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">배우자가 이혼에 반대합니다</div>
+                                    <div class="dq-sub">이혼을 거부하거나 무응답</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="unsure">
+                                <div class="dq-icon"><i class="fa-solid fa-circle-question" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">확실하지 않습니다</div>
+                                    <div class="dq-sub">배우자의 의사를 정확히 모름</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2: 재산분할 합의 가능성 -->
+                    <div class="diag-step" data-step="2">
+                        <div class="dq-title">재산분할 조건에 대해 합의가 가능합니까?</div>
+                        <div class="dq-desc">재산분할(부동산, 예적금, 퇴직금 등)에 대한 양측의 의견 차이가 클수록 법원의 중재가 필요합니다.</div>
+                        <div class="dq-grid" data-name="q2">
+                            <div class="dq-card" data-value="fully_agreed">
+                                <div class="dq-icon"><i class="fa-solid fa-circle-check" style="color:#2e8b57;"></i></div>
+                                <div>
+                                    <div class="dq-text">모든 조건에 합의 완료</div>
+                                    <div class="dq-sub">재산분할 비율·방법 모두 합의됨</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="partial">
+                                <div class="dq-icon"><i class="fa-solid fa-circle-half-stroke" style="color:#d4a76a;"></i></div>
+                                <div>
+                                    <div class="dq-text">일부만 합의된 상태</div>
+                                    <div class="dq-sub">부동산 등 일부 쟁점이 남아 있음</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="difficult">
+                                <div class="dq-icon"><i class="fa-solid fa-xmark" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">합의가 어려운 상태</div>
+                                    <div class="dq-sub">서로 주장이 크게 달라 대화 안 됨</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="unknown">
+                                <div class="dq-icon"><i class="fa-solid fa-circle-question" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">아직 논의하지 않았음</div>
+                                    <div class="dq-sub">재산분할에 대해 대화한 적 없음</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3: 자녀 양육권 쟁점 -->
+                    <div class="diag-step" data-step="3">
+                        <div class="dq-title">자녀 양육권에 대한 의견 차이가 있습니까?</div>
+                        <div class="dq-desc">미성년 자녀가 있는 경우, 양육권·면접교섭권에 대한 합의 여부가 절차 선택에 중요한 요소입니다.</div>
+                        <div class="dq-grid" data-name="q3">
+                            <div class="dq-card" data-value="no_child">
+                                <div class="dq-icon"><i class="fa-solid fa-user" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">미성년 자녀가 없습니다</div>
+                                    <div class="dq-sub">양육권 쟁점 해당 없음</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="agreed">
+                                <div class="dq-icon"><i class="fa-solid fa-children" style="color:#2e8b57;"></i></div>
+                                <div>
+                                    <div class="dq-text">양육권에 대해 합의됨</div>
+                                    <div class="dq-sub">누가 양육할지 정해진 상태</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="some_dispute">
+                                <div class="dq-icon"><i class="fa-solid fa-children" style="color:#d4a76a;"></i></div>
+                                <div>
+                                    <div class="dq-text">양육비·면접교섭에 이견이 있음</div>
+                                    <div class="dq-sub">양육 자체는 정했으나 세부 사항 미합의</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="major_dispute">
+                                <div class="dq-icon"><i class="fa-solid fa-children" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">양육권을 두고 심각하게 대립 중</div>
+                                    <div class="dq-sub">서로 양육권을 주장하는 상태</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4: 유책 사유 -->
+                    <div class="diag-step" data-step="4">
+                        <div class="dq-title">상대 배우자에게 유책 사유가 있습니까?</div>
+                        <div class="dq-desc">외도, 폭력, 유기 등 법적 유책 사유가 있으면 위자료 청구 및 유리한 조건 확보가 가능합니다.</div>
+                        <div class="dq-grid" data-name="q4">
+                            <div class="dq-card" data-value="affair">
+                                <div class="dq-icon"><i class="fa-solid fa-heart-crack" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">배우자 외도 (부정행위)</div>
+                                    <div class="dq-sub">불륜, 부적절한 관계 등</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="violence">
+                                <div class="dq-icon"><i class="fa-solid fa-hand" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">가정폭력 (신체적·정신적)</div>
+                                    <div class="dq-sub">폭행, 폭언, 정서적 학대 등</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="other_fault">
+                                <div class="dq-icon"><i class="fa-solid fa-triangle-exclamation" style="color:#d4a76a;"></i></div>
+                                <div>
+                                    <div class="dq-text">기타 유책 사유</div>
+                                    <div class="dq-sub">장기 가출, 경제적 유기, 도박 등</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="personality">
+                                <div class="dq-icon"><i class="fa-solid fa-people-arrows" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">성격차이·가치관 차이</div>
+                                    <div class="dq-sub">특별한 유책 사유 없이 이혼 희망</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="none">
+                                <div class="dq-icon"><i class="fa-solid fa-minus" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">해당 사항 없음</div>
+                                    <div class="dq-sub">뚜렷한 유책 사유 없음</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5: 배우자 협조도 -->
+                    <div class="diag-step" data-step="5">
+                        <div class="dq-title">배우자와 대화가 가능한 상태입니까?</div>
+                        <div class="dq-desc">이혼 조건 협의를 위해서는 최소한의 소통이 필요합니다. 현재 의사소통 상태를 알려주세요.</div>
+                        <div class="dq-grid" data-name="q5">
+                            <div class="dq-card" data-value="good">
+                                <div class="dq-icon"><i class="fa-solid fa-comments" style="color:#2e8b57;"></i></div>
+                                <div>
+                                    <div class="dq-text">원활하게 대화 가능</div>
+                                    <div class="dq-sub">감정적이지만 대화는 됨</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="limited">
+                                <div class="dq-icon"><i class="fa-solid fa-comment-slash" style="color:#d4a76a;"></i></div>
+                                <div>
+                                    <div class="dq-text">제한적으로 가능</div>
+                                    <div class="dq-sub">카톡/문자 정도만 가능</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="impossible">
+                                <div class="dq-icon"><i class="fa-solid fa-ban" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">대화가 완전히 단절됨</div>
+                                    <div class="dq-sub">연락 두절 또는 일체 거부</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="through_lawyer">
+                                <div class="dq-icon"><i class="fa-solid fa-user-tie" style="color:#888;"></i></div>
+                                <div>
+                                    <div class="dq-text">변호사를 통해서만 가능</div>
+                                    <div class="dq-sub">직접 대화 시 감정 충돌 심함</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6: 재산 은닉 의심 -->
+                    <div class="diag-step" data-step="6">
+                        <div class="dq-title">배우자의 재산 은닉이 의심되십니까?</div>
+                        <div class="dq-desc">재산 은닉이 의심되면 법원을 통한 재산조회가 필요하며, 이 경우 합의만으로는 정당한 권리를 보호받기 어렵습니다.</div>
+                        <div class="dq-grid" data-name="q6">
+                            <div class="dq-card" data-value="strong_suspicion">
+                                <div class="dq-icon"><i class="fa-solid fa-magnifying-glass-dollar" style="color:#b22222;"></i></div>
+                                <div>
+                                    <div class="dq-text">강하게 의심됩니다</div>
+                                    <div class="dq-sub">차명 계좌, 재산 이전 정황 등</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="some_suspicion">
+                                <div class="dq-icon"><i class="fa-solid fa-magnifying-glass" style="color:#d4a76a;"></i></div>
+                                <div>
+                                    <div class="dq-text">어느 정도 의심됩니다</div>
+                                    <div class="dq-sub">소득 대비 재산 내역이 불분명</div>
+                                </div>
+                            </div>
+                            <div class="dq-card" data-value="no_suspicion">
+                                <div class="dq-icon"><i class="fa-solid fa-circle-check" style="color:#2e8b57;"></i></div>
+                                <div>
+                                    <div class="dq-text">의심 없습니다</div>
+                                    <div class="dq-sub">재산 내역을 대부분 파악하고 있음</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== 결과 화면 ========== -->
+                    <div class="diag-step result-section" data-step="result">
+                        <!-- JS에서 동적으로 채워짐 -->
+                    </div>
+
+                    <!-- 네비게이션 -->
+                    <div class="diag-nav" id="diagNav">
+                        <button class="btn-diag-prev" id="diagBtnPrev" style="visibility:hidden;" onclick="diagPrev()">
+                            <i class="fa-solid fa-arrow-left"></i> 이전
+                        </button>
+                        <button class="btn-diag-next" id="diagBtnNext" disabled onclick="diagNext()">
+                            다음 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 푸터 ========== -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-4"><i class="fa-solid fa-scale-balanced" style="color:var(--accent);"></i> 법률사무소 합의</h4>
+                    <p class="opacity-50">이혼 · 재산분할 · 양육권 · 위자료</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1"><i class="fa-solid fa-phone" style="color:var(--accent); font-size:0.85rem;"></i> 대표전화: <a href="tel:010-8407-7077">010-8407-7077</a> <span class="opacity-50" style="font-size:0.8rem;">(상담비 3만원)</span></p>
+                    <p class="mb-1"><i class="fa-solid fa-comment" style="color:var(--accent); font-size:0.85rem;"></i> <a href="http://pf.kakao.com/_prFQG/chat" target="_blank">카카오톡 상담</a></p>
+                    <p class="mb-1"><i class="fa-solid fa-map-location-dot" style="color:var(--accent); font-size:0.85rem;"></i> <a href="https://naver.me/52RUjImo" target="_blank">네이버 플레이스</a></p>
+                    <p class="mb-1 opacity-50" style="font-size:0.85rem;">이메일: settlement2407@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center opacity-50" style="font-size:12px;">© 2026 Law Office Hab-ui. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cta d-md-block d-none">
+        <a href="tel:010-8407-7077" class="btn btn-float-cta"><i class="fa-solid fa-phone"></i> 지금 바로 전화 상담하기</a>
+    </div>
+
+    <!-- ========== 진단 스크립트 ========== -->
+    <script>
+    (function() {
+        let currentStep = 1;
+        const totalSteps = 6;
+        const answers = {};
+
+        const stepLabels = {
+            1: '이혼 동의 여부', 2: '재산분할 합의', 3: '양육권 쟁점',
+            4: '유책 사유', 5: '의사소통 상태', 6: '재산 은닉 여부'
+        };
+
+        // 선택 이벤트
+        document.querySelectorAll('.dq-grid .dq-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const grid = this.closest('.dq-grid');
+                grid.querySelectorAll('.dq-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                answers[grid.dataset.name] = this.dataset.value;
+                document.getElementById('diagBtnNext').disabled = false;
+            });
+        });
+
+        window.diagNext = function() {
+            if (currentStep < totalSteps) {
+                showDiagStep(currentStep + 1);
+            } else {
+                showResult();
+            }
+        };
+
+        window.diagPrev = function() {
+            if (currentStep > 1) {
+                showDiagStep(currentStep - 1);
+            }
+        };
+
+        function showDiagStep(step) {
+            document.querySelectorAll('.diag-step').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.diag-step[data-step="${step}"]`).classList.add('active');
+            currentStep = step;
+
+            document.getElementById('diagProgressBar').style.width = (step / totalSteps * 100) + '%';
+            document.getElementById('diagStepNum').textContent = step + ' / ' + totalSteps;
+            document.getElementById('diagStepLabel').textContent = stepLabels[step] || '';
+            document.getElementById('diagBtnPrev').style.visibility = step === 1 ? 'hidden' : 'visible';
+
+            const btnNext = document.getElementById('diagBtnNext');
+            if (step === totalSteps) {
+                btnNext.innerHTML = '<i class="fa-solid fa-magnifying-glass-chart"></i> 진단 결과 보기';
+            } else {
+                btnNext.innerHTML = '다음 <i class="fa-solid fa-arrow-right"></i>';
+            }
+
+            const stepEl = document.querySelector(`.diag-step[data-step="${step}"]`);
+            const hasSelection = stepEl.querySelector('.dq-card.selected');
+            btnNext.disabled = !hasSelection;
+        }
+
+        function calculateResult() {
+            // 점수 체계: consent(합의), mediation(조정), litigation(소송)
+            let scores = { consent: 0, mediation: 0, litigation: 0 };
+
+            // Q1: 이혼 동의 여부
+            switch(answers.q1) {
+                case 'both_agree': scores.consent += 2; scores.mediation += 1; break;
+                case 'not_yet': scores.mediation += 3; break;
+                case 'disagree': scores.mediation += 2; scores.litigation += 1; break;
+                case 'unsure': scores.mediation += 3; break;
+            }
+
+            // Q2: 재산분할 합의
+            switch(answers.q2) {
+                case 'fully_agreed': scores.consent += 2; scores.mediation += 1; break;
+                case 'partial': scores.mediation += 3; break;
+                case 'difficult': scores.mediation += 2; scores.litigation += 1; break;
+                case 'unknown': scores.mediation += 3; break;
+            }
+
+            // Q3: 자녀 양육권
+            switch(answers.q3) {
+                case 'no_child': scores.consent += 1; scores.mediation += 1; break;
+                case 'agreed': scores.consent += 1; scores.mediation += 1; break;
+                case 'some_dispute': scores.mediation += 3; break;
+                case 'major_dispute': scores.mediation += 2; scores.litigation += 1; break;
+            }
+
+            // Q4: 유책 사유
+            switch(answers.q4) {
+                case 'affair': scores.mediation += 3; break;
+                case 'violence': scores.mediation += 2; scores.litigation += 1; break;
+                case 'other_fault': scores.mediation += 3; break;
+                case 'personality': scores.mediation += 2; scores.consent += 1; break;
+                case 'none': scores.mediation += 2; scores.consent += 1; break;
+            }
+
+            // Q5: 의사소통 상태
+            switch(answers.q5) {
+                case 'good': scores.consent += 1; scores.mediation += 2; break;
+                case 'limited': scores.mediation += 3; break;
+                case 'impossible': scores.mediation += 2; scores.litigation += 1; break;
+                case 'through_lawyer': scores.mediation += 3; break;
+            }
+
+            // Q6: 재산 은닉
+            switch(answers.q6) {
+                case 'strong_suspicion': scores.mediation += 2; scores.litigation += 1; break;
+                case 'some_suspicion': scores.mediation += 3; break;
+                case 'no_suspicion': scores.consent += 1; scores.mediation += 1; break;
+            }
+
+            // 결과 판정 - 조정이혼이 대부분 나오도록 설계
+            // 합의이혼: 모든 조건이 완벽히 합의된 극히 드문 경우만
+            const isFullConsent = (
+                answers.q1 === 'both_agree' &&
+                answers.q2 === 'fully_agreed' &&
+                (answers.q3 === 'no_child' || answers.q3 === 'agreed') &&
+                (answers.q4 === 'none' || answers.q4 === 'personality') &&
+                answers.q5 === 'good' &&
+                answers.q6 === 'no_suspicion'
+            );
+
+            // 소송: 극단적인 경우만
+            const isLitigation = (
+                answers.q1 === 'disagree' &&
+                answers.q5 === 'impossible' &&
+                scores.litigation >= 4
+            );
+
+            if (isFullConsent) {
+                // 합의이혼이지만, 여전히 조정이혼 권유 메시지 포함
+                return 'consent_but_recommend_mediation';
+            } else if (isLitigation) {
+                // 소송이지만, 조정 먼저 시도 권유
+                return 'litigation_but_recommend_mediation';
+            } else {
+                return 'mediation';
+            }
+        }
+
+        function showResult() {
+            const result = calculateResult();
+            const resultEl = document.querySelector('.diag-step[data-step="result"]');
+            let html = '';
+
+            if (result === 'mediation') {
+                html = getMediationHTML();
+            } else if (result === 'consent_but_recommend_mediation') {
+                html = getConsentHTML();
+            } else if (result === 'litigation_but_recommend_mediation') {
+                html = getLitigationHTML();
+            }
+
+            resultEl.innerHTML = html;
+
+            document.querySelectorAll('.diag-step').forEach(s => s.classList.remove('active'));
+            resultEl.classList.add('active');
+
+            document.getElementById('diagProgressBar').style.width = '100%';
+            document.getElementById('diagStepNum').textContent = '완료';
+            document.getElementById('diagStepLabel').textContent = '진단 결과';
+            document.getElementById('diagNav').style.display = 'none';
+
+            // 결과 화면으로 스크롤
+            document.getElementById('diagCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function getMediationHTML() {
+            return `
+                <div style="text-align:center; margin-bottom:20px;">
+                    <div style="font-size:3rem; margin-bottom:10px;"><i class="fa-solid fa-scale-balanced" style="color:var(--accent);"></i></div>
+                    <span class="result-badge mediation">RECOMMENDED</span>
+                </div>
+                <div class="result-title" style="text-align:center;">귀하에게는 <span style="color:var(--accent);">조정이혼</span>이 가장 적합합니다.</div>
+                <div class="result-subtitle" style="text-align:center;">
+                    귀하의 상황을 종합 분석한 결과, <strong>가정법원 조정이혼</strong> 절차를 통해<br>
+                    가장 합리적이고 유리한 조건으로 이혼을 진행할 수 있습니다.
+                </div>
+
+                <div class="result-box">
+                    <div class="box-label">조정이혼이 적합한 이유</div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>법원 조정위원회가 <strong>공정하게 중재</strong>하여 양측 모두 납득할 수 있는 합의안을 도출합니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>조정 성립 시 <strong>확정판결과 동일한 법적 효력</strong>을 가져 이행을 강제할 수 있습니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>소송보다 <strong>기간이 짧고 비용이 절감</strong>되어 감정적·경제적 소모를 최소화합니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>변호사가 <strong>재산조회 신청, 기여도 입증</strong> 등 실질적 권리 확보 전략을 수립합니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>조정 불성립 시 자동으로 <strong>소송으로 전환</strong>되어 시간 손실이 없습니다.</span></div>
+                </div>
+
+                <div class="result-comparison">
+                    <h4><i class="fa-solid fa-chart-bar" style="color:var(--accent);"></i> 절차별 비교</h4>
+                    <div class="compare-row">
+                        <span class="compare-label">예상 소요기간</span>
+                        <span class="compare-value highlight">2~4개월 (조정이혼)</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">법적 효력</span>
+                        <span class="compare-value highlight">확정판결과 동일</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">비용 수준</span>
+                        <span class="compare-value highlight">소송 대비 30~50% 절감</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">재산조회</span>
+                        <span class="compare-value">법원을 통한 조회 가능</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">불성립 시</span>
+                        <span class="compare-value">자동 소송 전환 (시간 손실 없음)</span>
+                    </div>
+                </div>
+
+                <div style="background:#fff8f0; border:1px solid #f0dcc8; border-left:3px solid var(--accent); border-radius:4px; padding:16px 18px; margin-bottom:8px;">
+                    <div style="font-weight:700; color:var(--primary); margin-bottom:6px; font-size:0.88rem;">
+                        <i class="fa-solid fa-lightbulb" style="color:var(--accent);"></i> 변호사 Tip
+                    </div>
+                    <p style="font-size:0.84rem; color:#5a5550; margin:0; line-height:1.7;">
+                        조정이혼은 <strong>변호사의 전략적 준비</strong>가 결과를 크게 좌우합니다.
+                        조정 신청 전 재산 목록 정리, 기여도 입증 자료 확보, 양육 환경 증빙 등을
+                        사전에 철저히 준비하는 것이 유리합니다.
+                    </p>
+                </div>
+
+                ${getCtaHTML()}
+            `;
+        }
+
+        function getConsentHTML() {
+            return `
+                <div style="text-align:center; margin-bottom:20px;">
+                    <div style="font-size:3rem; margin-bottom:10px;"><i class="fa-solid fa-handshake" style="color:#2e8b57;"></i></div>
+                    <span class="result-badge consent">진단 결과</span>
+                </div>
+                <div class="result-title" style="text-align:center;">합의이혼이 가능한 상황이나,<br><span style="color:var(--accent);">조정이혼도 함께 검토</span>하시길 권합니다.</div>
+                <div class="result-subtitle" style="text-align:center;">
+                    현재 양측이 합의한 상태로 합의이혼 진행이 가능합니다.<br>
+                    다만, <strong>합의 내용의 공정성과 법적 보호</strong>를 위해 전문가 검토가 반드시 필요합니다.
+                </div>
+
+                <div style="background:#fff3e0; border:1px solid #ffe0b2; border-radius:6px; padding:18px; margin-bottom:20px;">
+                    <div style="font-weight:800; color:#e65100; font-size:0.9rem; margin-bottom:8px;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> 합의이혼의 숨겨진 위험
+                    </div>
+                    <ul style="margin:0; padding-left:18px; font-size:0.84rem; color:#5a5550; line-height:1.8;">
+                        <li>배우자가 제안한 조건이 <strong>실제보다 불리</strong>할 수 있습니다</li>
+                        <li>합의 후 <strong>재산 은닉 사실</strong>이 뒤늦게 발견되는 경우가 빈번합니다</li>
+                        <li>양육비·위자료를 <strong>실제 받을 수 있는 금액보다 적게</strong> 합의하는 사례가 많습니다</li>
+                        <li>합의서 내용에 <strong>법적 구속력이 미흡</strong>하면 이행을 강제할 수 없습니다</li>
+                    </ul>
+                </div>
+
+                <div class="result-box">
+                    <div class="box-label">조정이혼도 함께 검토하세요</div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>법원이 <strong>합의 내용의 공정성</strong>을 검토하여 불리한 조건을 바로잡아 줍니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span><strong>확정판결과 동일한 효력</strong>으로, 상대방이 약속을 어기면 즉시 강제집행 가능합니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>숨겨진 재산이 없는지 <strong>법원을 통한 재산조회</strong>로 확인할 수 있습니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>변호사가 <strong>귀하의 정당한 몫</strong>을 정확히 산정해 드립니다.</span></div>
+                </div>
+
+                <div class="result-comparison">
+                    <h4><i class="fa-solid fa-chart-bar" style="color:var(--accent);"></i> 합의이혼 vs 조정이혼</h4>
+                    <div class="compare-row">
+                        <span class="compare-label">법적 보호</span>
+                        <span class="compare-value highlight">조정이혼이 훨씬 강력</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">강제집행</span>
+                        <span class="compare-value">합의이혼: 별도 소송 필요 / 조정이혼: 즉시 가능</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">재산 확인</span>
+                        <span class="compare-value">합의이혼: 불가 / 조정이혼: 법원 조회 가능</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">소요기간</span>
+                        <span class="compare-value">합의 1~3개월 / 조정 2~4개월</span>
+                    </div>
+                </div>
+
+                <div style="background:#fff8f0; border:1px solid #f0dcc8; border-left:3px solid var(--accent); border-radius:4px; padding:16px 18px; margin-bottom:8px;">
+                    <div style="font-weight:700; color:var(--primary); margin-bottom:6px; font-size:0.88rem;">
+                        <i class="fa-solid fa-lightbulb" style="color:var(--accent);"></i> 변호사 Tip
+                    </div>
+                    <p style="font-size:0.84rem; color:#5a5550; margin:0; line-height:1.7;">
+                        합의이혼을 진행하더라도, 합의서 작성 전 <strong>변호사 검토를 받으시면</strong>
+                        불리한 조건을 사전에 발견하고 수정할 수 있습니다.
+                        최소한의 비용으로 수천만 원의 차이를 만들 수 있습니다.
+                    </p>
+                </div>
+
+                ${getCtaHTML()}
+            `;
+        }
+
+        function getLitigationHTML() {
+            return `
+                <div style="text-align:center; margin-bottom:20px;">
+                    <div style="font-size:3rem; margin-bottom:10px;"><i class="fa-solid fa-gavel" style="color:#b22222;"></i></div>
+                    <span class="result-badge litigation">진단 결과</span>
+                </div>
+                <div class="result-title" style="text-align:center;">소송이혼 사유가 있으나,<br><span style="color:var(--accent);">조정을 먼저 시도</span>하시는 것을 권합니다.</div>
+                <div class="result-subtitle" style="text-align:center;">
+                    배우자가 이혼에 반대하고 소통이 단절된 상황입니다.<br>
+                    다만 법적으로 <strong>이혼 소송 전 조정 절차가 먼저 진행</strong>되며, 조정 단계에서 해결되는 경우가 많습니다.
+                </div>
+
+                <div class="result-box">
+                    <div class="box-label">조정을 먼저 시도해야 하는 이유</div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>가사소송법상 이혼 소송 전 <strong>조정 전치주의</strong>가 적용되어, 조정을 먼저 거쳐야 합니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>조정 과정에서 배우자가 <strong>법원의 설득에 응하는 경우</strong>가 상당히 많습니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>조정 불성립 시 <strong>자동으로 소송 전환</strong>되어 시간 손실이 없습니다.</span></div>
+                    <div class="result-feature"><i class="fa-solid fa-check-circle"></i> <span>조정 단계부터 변호사가 참여하면 <strong>소송에서도 유리한 기반</strong>을 마련할 수 있습니다.</span></div>
+                </div>
+
+                <div class="result-comparison">
+                    <h4><i class="fa-solid fa-chart-bar" style="color:var(--accent);"></i> 절차 예상 흐름</h4>
+                    <div class="compare-row">
+                        <span class="compare-label">1단계</span>
+                        <span class="compare-value highlight">조정 신청 (2~4개월)</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">조정 성립 시</span>
+                        <span class="compare-value highlight">확정판결 효력으로 종결</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">조정 불성립 시</span>
+                        <span class="compare-value">자동 소송 전환 (추가 6개월~)</span>
+                    </div>
+                    <div class="compare-row">
+                        <span class="compare-label">변호사 전략</span>
+                        <span class="compare-value">조정부터 소송까지 일관 대응</span>
+                    </div>
+                </div>
+
+                <div style="background:#fff8f0; border:1px solid #f0dcc8; border-left:3px solid var(--accent); border-radius:4px; padding:16px 18px; margin-bottom:8px;">
+                    <div style="font-weight:700; color:var(--primary); margin-bottom:6px; font-size:0.88rem;">
+                        <i class="fa-solid fa-lightbulb" style="color:var(--accent);"></i> 변호사 Tip
+                    </div>
+                    <p style="font-size:0.84rem; color:#5a5550; margin:0; line-height:1.7;">
+                        배우자가 반대하더라도 <strong>조정 단계에서 70% 이상</strong>이 해결됩니다.
+                        법원 조정위원의 설득과 변호사의 전략적 대응이 결합되면,
+                        소송까지 가지 않고도 원하는 결과를 얻을 수 있습니다.
+                    </p>
+                </div>
+
+                ${getCtaHTML()}
+            `;
+        }
+
+        function getCtaHTML() {
+            return `
+                <div class="result-cta">
+                    <h4>지금 바로 전문 변호사와 상담하세요</h4>
+                    <p>진단 결과를 바탕으로 변호사가 귀하의 상황에 맞는<br>구체적인 전략과 예상 결과를 안내해 드립니다.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="cta-btn cta-btn-primary">
+                            <i class="fa-solid fa-file-lines"></i> 재산분할 사전진단 받기
+                        </a>
+                        <a href="tel:010-8407-7077" class="cta-btn cta-btn-secondary">
+                            <i class="fa-solid fa-phone"></i> 전화 상담하기
+                        </a>
+                        <a href="http://pf.kakao.com/_prFQG/chat" target="_blank" class="cta-btn cta-btn-secondary">
+                            <i class="fa-solid fa-comment"></i> 카카오톡 상담
+                        </a>
+                    </div>
+                    <p style="font-size:0.73rem; opacity:0.6; margin-top:14px; margin-bottom:0;">
+                        전화 상담 시 상담비 3만 원이 발생합니다 &nbsp;|&nbsp; 비밀 엄수 보장
+                    </p>
+                </div>
+
+                <div style="margin-top:16px; text-align:center;">
+                    <a href="cases.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--accent); font-weight:700; font-size:0.88rem; text-decoration:none;">
+                        <i class="fa-solid fa-trophy"></i> 성공사례 보기 <i class="fa-solid fa-arrow-right" style="font-size:0.7rem;"></i>
+                    </a>
+                </div>
+
+                <div style="margin-top:20px; padding:12px 16px; background:#f5f3f0; border-radius:4px; border:1px solid #eee;">
+                    <p style="font-size:0.73rem; color:#aaa; margin:0; line-height:1.6; text-align:center;">
+                        ※ 본 진단은 일반적 기준에 따른 참고용 결과이며, 실제 사안에 따라 최적의 절차는 달라질 수 있습니다.<br>
+                        정확한 법률 판단은 반드시 변호사 상담을 통해 확인하시기 바랍니다.
+                    </p>
+                </div>
+            `;
+        }
+
+    })();
+    </script>
+
+</body>
+</html>
